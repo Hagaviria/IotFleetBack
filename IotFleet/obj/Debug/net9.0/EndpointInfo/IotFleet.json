@@ -5,6 +5,605 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Dashboard/statistics": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/recent-sensor-data": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/vehicle-status": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/fuel-consumption": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Health/detailed": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Health/database": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Login": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SensorData": {
+      "get": {
+        "tags": [
+          "SensorData"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "SensorData"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IngestSensorDataCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IngestSensorDataCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IngestSensorDataCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SensorData/{id}": {
+      "get": {
+        "tags": [
+          "SensorData"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "SensorData"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSensorDataCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSensorDataCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSensorDataCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "SensorData"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserCreateCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserCreateCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserCreateCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserUpdateCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserUpdateCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserUpdateCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/{id}/ChangePassword": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/{id}/Permissions": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Vehicle"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateVehicleCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateVehicleCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateVehicleCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/{id}": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/fleet/{fleetId}": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "fleetId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/license-plate/{licensePlate}": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "licensePlate",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -47,6 +646,381 @@
   },
   "components": {
     "schemas": {
+      "ChangePasswordCommand": {
+        "required": [
+          "NewPassword",
+          "OldPassword"
+        ],
+        "type": "object",
+        "properties": {
+          "OldPassword": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "NewPassword": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateVehicleCommand": {
+        "required": [
+          "AverageConsumption",
+          "Brand",
+          "FleetId",
+          "FuelCapacity",
+          "LicensePlate",
+          "Model"
+        ],
+        "type": "object",
+        "properties": {
+          "LicensePlate": {
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
+          },
+          "Model": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "Brand": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "FuelCapacity": {
+            "minimum": 0,1,
+            "type": "number",
+            "format": "double"
+          },
+          "AverageConsumption": {
+            "minimum": 0,1,
+            "type": "number",
+            "format": "double"
+          },
+          "FleetId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "LastMaintenance": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IngestSensorDataCommand": {
+        "type": "object",
+        "properties": {
+          "VehicleId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "Longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "Altitude": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "Speed": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FuelLevel": {
+            "type": "number",
+            "format": "double"
+          },
+          "FuelConsumption": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "EngineTemperature": {
+            "type": "number",
+            "format": "double"
+          },
+          "AmbientTemperature": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginCommand": {
+        "required": [
+          "Email",
+          "Password"
+        ],
+        "type": "object",
+        "properties": {
+          "Email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "Password": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateSensorDataCommand": {
+        "required": [
+          "Latitude",
+          "Longitude"
+        ],
+        "type": "object",
+        "properties": {
+          "Latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "Longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "Altitude": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "Speed": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FuelLevel": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FuelConsumption": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "EngineTemperature": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "AmbientTemperature": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateVehicleCommand": {
+        "required": [
+          "AverageConsumption",
+          "Brand",
+          "FleetId",
+          "FuelCapacity",
+          "LicensePlate",
+          "Model"
+        ],
+        "type": "object",
+        "properties": {
+          "LicensePlate": {
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
+          },
+          "Model": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "Brand": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "FuelCapacity": {
+            "minimum": 0,1,
+            "type": "number",
+            "format": "double"
+          },
+          "AverageConsumption": {
+            "minimum": 0,1,
+            "type": "number",
+            "format": "double"
+          },
+          "FleetId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "LastMaintenance": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserCreateCommand": {
+        "required": [
+          "Contraseña",
+          "Correo",
+          "Identificacion",
+          "Nombre_completo"
+        ],
+        "type": "object",
+        "properties": {
+          "Identificacion": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "Nombre_completo": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "Correo": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "Contraseña": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "Id_perfil": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Estado": {
+            "type": "boolean"
+          },
+          "Creado_en": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "Nombre_IPS": {
+            "type": "string",
+            "nullable": true
+          },
+          "Codigo_IPS": {
+            "type": "string",
+            "nullable": true
+          },
+          "Codigo_Habilitacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "Direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "TelefonoFijo": {
+            "type": "string",
+            "nullable": true
+          },
+          "TelefonoCelular": {
+            "type": "string",
+            "nullable": true
+          },
+          "FechaNacimiento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "TipoIdentificacion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserUpdateCommand": {
+        "required": [
+          "Contraseña",
+          "Correo",
+          "Identificacion",
+          "Nombre_completo"
+        ],
+        "type": "object",
+        "properties": {
+          "Identificacion": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "Nombre_completo": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "Correo": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "Contraseña": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "Id_perfil": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Estado": {
+            "type": "boolean"
+          },
+          "Creado_en": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "Nombre_IPS": {
+            "type": "string",
+            "nullable": true
+          },
+          "Codigo_IPS": {
+            "type": "string",
+            "nullable": true
+          },
+          "Codigo_Habilitacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "Direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "TelefonoFijo": {
+            "type": "string",
+            "nullable": true
+          },
+          "TelefonoCelular": {
+            "type": "string",
+            "nullable": true
+          },
+          "FechaNacimiento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "TipoIdentificacion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {

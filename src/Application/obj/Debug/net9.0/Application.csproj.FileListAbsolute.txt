@@ -15,3 +15,4 @@ C:\Users\Harold\IotFleet\src\Application\obj\Debug\net9.0\Application.dll
 C:\Users\Harold\IotFleet\src\Application\obj\Debug\net9.0\refint\Application.dll
 C:\Users\Harold\IotFleet\src\Application\obj\Debug\net9.0\Application.pdb
 C:\Users\Harold\IotFleet\src\Application\obj\Debug\net9.0\ref\Application.dll
+C:\Users\Harold\IotFleet\src\Application\obj\Debug\net9.0\Application.sourcelink.json

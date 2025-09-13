@@ -5,6 +5,35 @@ namespace IotFleet.Infrastructure;
 
 public static class CustomResults
 {
+    public static IActionResult Success<T>(T? result = default, string? title = null, int? status = null)
+    {
+        var response = new
+        {
+            success = true,
+            title = title ?? "Operation successful",
+            data = result
+        };
+
+        return new ObjectResult(response)
+        {
+            StatusCode = status ?? StatusCodes.Status200OK
+        };
+    }
+
+    public static IActionResult Success(string? title = null, int? status = null)
+    {
+        var response = new
+        {
+            success = true,
+            title = title ?? "Operation successful"
+        };
+
+        return new ObjectResult(response)
+        {
+            StatusCode = status ?? StatusCodes.Status200OK
+        };
+    }
+
     public static IActionResult Problem(Result result)
     {
         if (result.IsSuccess)
@@ -18,7 +47,7 @@ public static class CustomResults
             Detail = GetDetail(result.Error),
             Type = GetType(result.Error.Type),
             Status = GetStatusCode(result.Error.Type),
-            Extensions = GetErrors(result)
+            Extensions = GetErrors(result) ?? new Dictionary<string, object?>()
         };
 
         return new ObjectResult(problemDetails)

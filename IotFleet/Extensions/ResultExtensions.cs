@@ -1,4 +1,5 @@
-﻿using SharedKernel;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using SharedKernel;
 
 namespace IotFleet.Extensions;
 
@@ -35,5 +36,20 @@ public static class ResultExtensions
         Func<Result<TIn>, TOut> onFailure)
     {
         return result.IsSuccess ? onSuccess(result.Value) : onFailure(result);
+    }
+
+    /// <summary>
+    /// Serializes ModelState errors into a string format.
+    /// </summary>
+    /// <param name="modelState">The ModelState to serialize.</param>
+    /// <returns>A string representation of the ModelState errors.</returns>
+    public static string SerializeModelStateErrors(this ModelStateDictionary modelState)
+    {
+        var errors = modelState
+            .Where(x => x.Value?.Errors.Count > 0)
+            .SelectMany(x => x.Value!.Errors.Select(e => $"{x.Key}: {e.ErrorMessage}"))
+            .ToList();
+
+        return string.Join("; ", errors);
     }
 }

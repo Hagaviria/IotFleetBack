@@ -196,4 +196,5 @@ C:\Users\Harold\IotFleet\IotFleet\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Wor
 C:\Users\Harold\IotFleet\IotFleet\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Harold\IotFleet\IotFleet\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Harold\IotFleet\IotFleet\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Harold\IotFleet\IotFleet\obj\Debug\net9.0\IotFleet.sourcelink.json
 C:\Users\Harold\IotFleet\IotFleet\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

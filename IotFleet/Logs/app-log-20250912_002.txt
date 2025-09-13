@@ -1,0 +1,201 @@
+[2025-09-12 22:49:28 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 22:52:20 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 22:52:32 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 22:52:55 INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:52:56 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+[2025-09-12 22:52:56 INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+[2025-09-12 22:52:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+[2025-09-12 22:52:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:52:56 INF] Applying migration '20250913035213_InitialCreate'.
+[2025-09-12 22:52:56 ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Id" uuid NOT NULL,
+    "Email" character varying(255) NOT NULL,
+    "FirstName" character varying(100) NOT NULL,
+    "LastName" character varying(100) NOT NULL,
+    "PasswordHash" text NOT NULL,
+    "Role" text,
+    "CreatedAtDate" timestamp with time zone NOT NULL,
+    "UpdatedAtDate" timestamp with time zone NOT NULL,
+    "USU_ESTADO" boolean NOT NULL,
+    CONSTRAINT "PK_Users" PRIMARY KEY ("Id")
+);
+[2025-09-12 22:54:18 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 22:54:55 ERR] An error occurred using the connection to database 'IotFleet' on server 'tcp://localhost:5432'.
+[2025-09-12 22:54:56 INF] Executed DbCommand (90ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE "IotFleet";
+[2025-09-12 22:54:56 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+[2025-09-12 22:54:56 INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+[2025-09-12 22:54:56 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+[2025-09-12 22:54:56 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:54:56 INF] Applying migration '20250913035213_InitialCreate'.
+[2025-09-12 22:54:56 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Id" uuid NOT NULL,
+    "Email" character varying(255) NOT NULL,
+    "FirstName" character varying(100) NOT NULL,
+    "LastName" character varying(100) NOT NULL,
+    "PasswordHash" text NOT NULL,
+    "Role" text,
+    "CreatedAtDate" timestamp with time zone NOT NULL,
+    "UpdatedAtDate" timestamp with time zone NOT NULL,
+    "USU_ESTADO" boolean NOT NULL,
+    CONSTRAINT "PK_Users" PRIMARY KEY ("Id")
+);
+[2025-09-12 22:54:56 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Vehicles" (
+    "Id" uuid NOT NULL,
+    "LicensePlate" character varying(20) NOT NULL,
+    "Model" character varying(100) NOT NULL,
+    "Brand" character varying(100) NOT NULL,
+    "FuelCapacity" double precision NOT NULL,
+    "AverageConsumption" double precision NOT NULL,
+    "FleetId" uuid NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "LastMaintenance" timestamp with time zone,
+    CONSTRAINT "PK_Vehicles" PRIMARY KEY ("Id")
+);
+[2025-09-12 22:54:56 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "SensorData" (
+    "Id" uuid NOT NULL,
+    "VehicleId" uuid NOT NULL,
+    "Latitude" double precision NOT NULL,
+    "Longitude" double precision NOT NULL,
+    "Altitude" double precision,
+    "Speed" double precision,
+    "FuelLevel" double precision NOT NULL,
+    "FuelConsumption" double precision,
+    "EngineTemperature" double precision NOT NULL,
+    "AmbientTemperature" double precision,
+    "Timestamp" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_SensorData" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_SensorData_Vehicles_VehicleId" FOREIGN KEY ("VehicleId") REFERENCES "Vehicles" ("Id") ON DELETE CASCADE
+);
+[2025-09-12 22:54:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SensorData_Timestamp" ON "SensorData" ("Timestamp" DESC);
+[2025-09-12 22:54:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SensorData_VehicleId" ON "SensorData" ("VehicleId");
+[2025-09-12 22:54:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SensorData_VehicleId_FuelLevel_Timestamp" ON "SensorData" ("VehicleId", "FuelLevel", "Timestamp");
+[2025-09-12 22:54:56 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SensorData_VehicleId_Timestamp" ON "SensorData" ("VehicleId", "Timestamp" DESC);
+[2025-09-12 22:54:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Users_Email" ON "Users" ("Email");
+[2025-09-12 22:54:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Vehicles_FleetId" ON "Vehicles" ("FleetId");
+[2025-09-12 22:54:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Vehicles_LicensePlate" ON "Vehicles" ("LicensePlate");
+[2025-09-12 22:54:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250913035213_InitialCreate', '9.0.9');
+[2025-09-12 22:54:56 INF] Applying migration '20250913035440_MarkAsApplied'.
+[2025-09-12 22:54:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250913035440_MarkAsApplied', '9.0.9');
+[2025-09-12 22:55:19 INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:55:19 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+[2025-09-12 22:55:19 INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+[2025-09-12 22:55:19 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+[2025-09-12 22:55:19 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:55:19 INF] Applying migration '20250913035213_InitialCreate'.
+[2025-09-12 22:55:19 ERR] Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Id" uuid NOT NULL,
+    "Email" character varying(255) NOT NULL,
+    "FirstName" character varying(100) NOT NULL,
+    "LastName" character varying(100) NOT NULL,
+    "PasswordHash" text NOT NULL,
+    "Role" text,
+    "CreatedAtDate" timestamp with time zone NOT NULL,
+    "UpdatedAtDate" timestamp with time zone NOT NULL,
+    "USU_ESTADO" boolean NOT NULL,
+    CONSTRAINT "PK_Users" PRIMARY KEY ("Id")
+);
+[2025-09-12 23:02:27 INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 23:02:27 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+[2025-09-12 23:02:27 INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+[2025-09-12 23:02:28 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+[2025-09-12 23:02:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 23:02:28 INF] Applying migration '20250913040153_EmptyMigration'.
+[2025-09-12 23:02:28 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250913040153_EmptyMigration', '9.0.9');
+[2025-09-12 23:02:53 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 23:03:54 INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 23:03:54 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+[2025-09-12 23:03:54 INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+[2025-09-12 23:03:54 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+[2025-09-12 23:03:54 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 23:03:54 INF] Applying migration '20250913040153_EmptyMigration'.
+[2025-09-12 23:03:54 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250913040153_EmptyMigration', '9.0.9');
+[2025-09-12 23:03:55 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 23:03:55 INF] Now listening on: https://localhost:51625
+[2025-09-12 23:03:55 INF] Now listening on: http://localhost:51626
+[2025-09-12 23:03:55 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 23:03:55 INF] Hosting environment: Development
+[2025-09-12 23:03:55 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 23:04:02 INF] Request starting HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - null null
+[2025-09-12 23:04:02 INF] Request finished HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 19.1819ms
+[2025-09-12 23:04:03 INF] Request starting HTTP/2 GET https://localhost:7162/_vs/browserLink - null null
+[2025-09-12 23:04:03 INF] Request finished HTTP/2 GET https://localhost:7162/_vs/browserLink - 200 null text/javascript; charset=UTF-8 100.9387ms
+[2025-09-12 23:04:03 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - null null
+[2025-09-12 23:04:03 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 73.0895ms

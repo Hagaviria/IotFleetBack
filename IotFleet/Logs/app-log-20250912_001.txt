@@ -1,0 +1,240 @@
+[2025-09-12 19:48:46 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 19:48:46 INF] Now listening on: https://localhost:60085
+[2025-09-12 19:48:46 INF] Now listening on: http://localhost:60088
+[2025-09-12 19:48:46 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 19:48:46 INF] Hosting environment: Development
+[2025-09-12 19:48:46 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 19:50:13 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 19:50:13 INF] Now listening on: https://localhost:57632
+[2025-09-12 19:50:13 INF] Now listening on: http://localhost:57633
+[2025-09-12 19:50:13 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 19:50:13 INF] Hosting environment: Development
+[2025-09-12 19:50:13 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 20:09:29 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 20:09:29 INF] Now listening on: https://localhost:63537
+[2025-09-12 20:09:29 INF] Now listening on: http://localhost:63539
+[2025-09-12 20:09:29 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 20:09:29 INF] Hosting environment: Development
+[2025-09-12 20:09:29 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 20:12:19 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 20:12:19 INF] Now listening on: https://localhost:65410
+[2025-09-12 20:12:19 INF] Now listening on: http://localhost:65411
+[2025-09-12 20:12:19 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 20:12:19 INF] Hosting environment: Development
+[2025-09-12 20:12:19 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 20:15:28 ERR] An error occurred using the connection to database 'myappdb' on server 'tcp://localhost:57630'.
+[2025-09-12 20:16:32 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 20:16:33 INF] Now listening on: https://localhost:57636
+[2025-09-12 20:16:33 INF] Now listening on: http://localhost:57638
+[2025-09-12 20:16:33 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 20:16:33 INF] Hosting environment: Development
+[2025-09-12 20:16:33 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 20:23:17 ERR] An error occurred using the connection to database 'iotfleet' on server 'tcp://localhost:5432'.
+[2025-09-12 20:24:20 ERR] An error occurred using the connection to database 'iotfleet' on server 'tcp://localhost:5432'.
+[2025-09-12 20:27:45 ERR] An error occurred using the connection to database 'iotfleet' on server 'tcp://localhost:5432'.
+[2025-09-12 20:30:19 ERR] An error occurred using the connection to database 'iotfleet' on server 'tcp://localhost:5432'.
+[2025-09-12 20:32:31 ERR] An error occurred using the connection to database 'iotfleet' on server 'tcp://localhost:5432'.
+[2025-09-12 20:37:10 ERR] An error occurred using the connection to database 'myappdb' on server 'tcp://localhost:5432'.
+[2025-09-12 20:37:10 ERR] Failed executing DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE myappdb;
+[2025-09-12 20:38:06 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 20:38:41 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 20:43:34 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 20:44:04 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 20:44:28 ERR] Failed executing DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 20:44:28 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+[2025-09-12 20:44:28 INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+[2025-09-12 20:44:28 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+[2025-09-12 20:44:28 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 20:44:28 INF] Applying migration '20250913003518_InitialCreate'.
+[2025-09-12 20:44:28 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Id" uuid NOT NULL,
+    "Email" text,
+    "FirstName" text,
+    "LastName" text,
+    "PasswordHash" text,
+    "Role" text,
+    "CreatedAtDate" timestamp with time zone NOT NULL,
+    "UpdatedAtDate" timestamp with time zone NOT NULL,
+    "USU_ESTADO" boolean NOT NULL,
+    CONSTRAINT "PK_Users" PRIMARY KEY ("Id")
+);
+[2025-09-12 20:44:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Vehicles" (
+    "Id" uuid NOT NULL,
+    "LicensePlate" character varying(20) NOT NULL,
+    "Model" character varying(100) NOT NULL,
+    "Brand" character varying(100) NOT NULL,
+    "FuelCapacity" double precision NOT NULL,
+    "AverageConsumption" double precision NOT NULL,
+    "FleetId" uuid NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "LastMaintenance" timestamp with time zone,
+    CONSTRAINT "PK_Vehicles" PRIMARY KEY ("Id")
+);
+[2025-09-12 20:44:28 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "SensorData" (
+    "Id" uuid NOT NULL,
+    "VehicleId" uuid NOT NULL,
+    "Latitude" double precision NOT NULL,
+    "Longitude" double precision NOT NULL,
+    "Altitude" double precision,
+    "Speed" double precision,
+    "FuelLevel" double precision NOT NULL,
+    "FuelConsumption" double precision,
+    "EngineTemperature" double precision NOT NULL,
+    "AmbientTemperature" double precision,
+    "Timestamp" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_SensorData" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_SensorData_Vehicles_VehicleId" FOREIGN KEY ("VehicleId") REFERENCES "Vehicles" ("Id") ON DELETE CASCADE
+);
+[2025-09-12 20:44:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SensorData_Timestamp" ON "SensorData" ("Timestamp" DESC);
+[2025-09-12 20:44:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SensorData_VehicleId" ON "SensorData" ("VehicleId");
+[2025-09-12 20:44:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SensorData_VehicleId_FuelLevel_Timestamp" ON "SensorData" ("VehicleId", "FuelLevel", "Timestamp");
+[2025-09-12 20:44:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SensorData_VehicleId_Timestamp" ON "SensorData" ("VehicleId", "Timestamp" DESC);
+[2025-09-12 20:44:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Vehicles_FleetId" ON "Vehicles" ("FleetId");
+[2025-09-12 20:44:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Vehicles_LicensePlate" ON "Vehicles" ("LicensePlate");
+[2025-09-12 20:44:28 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250913003518_InitialCreate', '9.0.9');
+[2025-09-12 20:44:28 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 20:44:28 INF] Now listening on: https://localhost:60796
+[2025-09-12 20:44:28 INF] Now listening on: http://localhost:60797
+[2025-09-12 20:44:28 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 20:44:28 INF] Hosting environment: Development
+[2025-09-12 20:44:28 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 20:44:52 INF] Request starting HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - null null
+[2025-09-12 20:44:52 INF] Request finished HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 22.4607ms
+[2025-09-12 20:44:52 INF] Request starting HTTP/2 GET https://localhost:7162/_vs/browserLink - null null
+[2025-09-12 20:44:52 INF] Request finished HTTP/2 GET https://localhost:7162/_vs/browserLink - 200 null text/javascript; charset=UTF-8 80.0138ms
+[2025-09-12 20:44:53 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - null null
+[2025-09-12 20:44:53 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.2827ms
+[2025-09-12 21:18:42 INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 21:18:42 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+[2025-09-12 21:18:42 INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+[2025-09-12 21:18:42 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+[2025-09-12 21:18:42 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 21:18:42 INF] No migrations were applied. The database is already up to date.
+[2025-09-12 21:18:42 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 21:18:43 INF] Now listening on: https://localhost:64041
+[2025-09-12 21:18:43 INF] Now listening on: http://localhost:64043
+[2025-09-12 21:18:43 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 21:18:43 INF] Hosting environment: Development
+[2025-09-12 21:18:43 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 21:18:48 INF] Request starting HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - null null
+[2025-09-12 21:18:48 INF] Request finished HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 18.979ms
+[2025-09-12 21:18:48 INF] Request starting HTTP/2 GET https://localhost:7162/_vs/browserLink - null null
+[2025-09-12 21:18:48 INF] Request finished HTTP/2 GET https://localhost:7162/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.9513ms
+[2025-09-12 21:18:48 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - null null
+[2025-09-12 21:18:48 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 112.086ms
+[2025-09-12 21:19:35 INF] Request starting HTTP/2 POST https://localhost:7162/api/Vehicle - application/json 177
+[2025-09-12 21:19:35 INF] Executing endpoint 'IotFleet.Controllers.VehicleController.CreateVehicle (IotFleet)'
+[2025-09-12 21:19:35 INF] Route matched with {action = "CreateVehicle", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateVehicle(IotFleet.Controllers.CreateVehicleRequest) on controller IotFleet.Controllers.VehicleController (IotFleet).
+[2025-09-12 21:19:35 INF] Executing action method IotFleet.Controllers.VehicleController.CreateVehicle (IotFleet) - Validation state: "Valid"
+[2025-09-12 21:19:35 INF] Executed action method IotFleet.Controllers.VehicleController.CreateVehicle (IotFleet), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 1.6776ms.
+[2025-09-12 21:19:35 INF] Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType45`3[[<>f__AnonymousType41`9[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], IotFleet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-09-12 21:19:35 INF] Executed action IotFleet.Controllers.VehicleController.CreateVehicle (IotFleet) in 77.7322ms
+[2025-09-12 21:19:35 INF] Executed endpoint 'IotFleet.Controllers.VehicleController.CreateVehicle (IotFleet)'
+[2025-09-12 21:19:35 INF] Request finished HTTP/2 POST https://localhost:7162/api/Vehicle - 201 null application/json; charset=utf-8 107.711ms
+[2025-09-12 21:20:30 INF] Request starting HTTP/2 GET https://localhost:7162/api/Vehicle - null null
+[2025-09-12 21:20:30 INF] Executing endpoint 'IotFleet.Controllers.VehicleController.GetVehicles (IotFleet)'
+[2025-09-12 21:20:30 INF] Route matched with {action = "GetVehicles", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetVehicles() on controller IotFleet.Controllers.VehicleController (IotFleet).
+[2025-09-12 21:20:30 INF] Executing action method IotFleet.Controllers.VehicleController.GetVehicles (IotFleet) - Validation state: "Valid"
+[2025-09-12 21:20:30 INF] Executed action method IotFleet.Controllers.VehicleController.GetVehicles (IotFleet), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.8253ms.
+[2025-09-12 21:20:30 INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType42`4[[<>f__AnonymousType41`9[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][], IotFleet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-09-12 21:20:30 INF] Executed action IotFleet.Controllers.VehicleController.GetVehicles (IotFleet) in 6.2109ms
+[2025-09-12 21:20:30 INF] Executed endpoint 'IotFleet.Controllers.VehicleController.GetVehicles (IotFleet)'
+[2025-09-12 21:20:30 INF] Request finished HTTP/2 GET https://localhost:7162/api/Vehicle - 200 null application/json; charset=utf-8 12.8332ms
+[2025-09-12 21:23:01 INF] Request starting HTTP/2 GET https://localhost:7162/api/Vehicle - null null
+[2025-09-12 21:23:01 INF] Executing endpoint 'IotFleet.Controllers.VehicleController.GetVehicles (IotFleet)'
+[2025-09-12 21:23:01 INF] Route matched with {action = "GetVehicles", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetVehicles() on controller IotFleet.Controllers.VehicleController (IotFleet).
+[2025-09-12 21:23:01 INF] Executing action method IotFleet.Controllers.VehicleController.GetVehicles (IotFleet) - Validation state: "Valid"
+[2025-09-12 21:23:01 INF] Executed action method IotFleet.Controllers.VehicleController.GetVehicles (IotFleet), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0216ms.
+[2025-09-12 21:23:01 INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType42`4[[<>f__AnonymousType41`9[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][], IotFleet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-09-12 21:23:01 INF] Executed action IotFleet.Controllers.VehicleController.GetVehicles (IotFleet) in 0.5086ms
+[2025-09-12 21:23:01 INF] Executed endpoint 'IotFleet.Controllers.VehicleController.GetVehicles (IotFleet)'
+[2025-09-12 21:23:01 INF] Request finished HTTP/2 GET https://localhost:7162/api/Vehicle - 200 null application/json; charset=utf-8 1.6852ms
+[2025-09-12 21:23:48 INF] Request starting HTTP/2 GET https://localhost:7162/api/Vehicle - null null
+[2025-09-12 21:23:48 INF] Executing endpoint 'IotFleet.Controllers.VehicleController.GetVehicles (IotFleet)'
+[2025-09-12 21:23:48 INF] Route matched with {action = "GetVehicles", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetVehicles() on controller IotFleet.Controllers.VehicleController (IotFleet).
+[2025-09-12 21:23:48 INF] Executing action method IotFleet.Controllers.VehicleController.GetVehicles (IotFleet) - Validation state: "Valid"
+[2025-09-12 21:23:48 INF] Executed action method IotFleet.Controllers.VehicleController.GetVehicles (IotFleet), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0134ms.
+[2025-09-12 21:23:48 INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType42`4[[<>f__AnonymousType41`9[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]][], IotFleet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2025-09-12 21:23:48 INF] Executed action IotFleet.Controllers.VehicleController.GetVehicles (IotFleet) in 0.4193ms
+[2025-09-12 21:23:48 INF] Executed endpoint 'IotFleet.Controllers.VehicleController.GetVehicles (IotFleet)'
+[2025-09-12 21:23:48 INF] Request finished HTTP/2 GET https://localhost:7162/api/Vehicle - 200 null application/json; charset=utf-8 1.3384ms
+[2025-09-12 21:44:17 INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 21:47:48 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 21:48:37 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 21:49:11 ERR] An error occurred using the connection to database 'iotfleet' on server 'tcp://localhost:5432'.
+[2025-09-12 22:18:34 ERR] Failed executing DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:22:18 ERR] Failed executing DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:23:43 ERR] Failed executing DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:26:39 ERR] Failed executing DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:28:43 ERR] Failed executing DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:33:35 INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:34:37 INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:39:45 INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2025-09-12 22:44:14 ERR] An error occurred using the connection to database '' on server ''.
+[2025-09-12 22:46:53 INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";

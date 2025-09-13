@@ -1,0 +1,90 @@
+[2025-09-12 16:11:54 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 16:11:54 INF] Now listening on: https://localhost:63799
+[2025-09-12 16:11:54 INF] Now listening on: http://localhost:63801
+[2025-09-12 16:11:54 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 16:11:54 INF] Hosting environment: Development
+[2025-09-12 16:11:54 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/swagger - null null
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/index.html - null null
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/swagger - 301 0 null 174.6028ms
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/index.html - 200 null text/html;charset=utf-8 105.5455ms
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/swagger-ui.css - null null
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/index.css - null null
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/swagger-ui-bundle.js - null null
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/swagger-ui-standalone-preset.js - null null
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - null null
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/index.js - null null
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/index.js - 200 null application/javascript;charset=utf-8 8.6106ms
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 54.3266ms
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/_vs/browserLink - null null
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/index.css - 200 152 text/css 74.5837ms
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/swagger-ui-standalone-preset.js - 200 70860 text/javascript 82.5003ms
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/swagger-ui.css - 200 23647 text/css 83.2792ms
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/swagger-ui-bundle.js - 200 417980 text/javascript 84.4655ms
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.6411ms
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/favicon-32x32.png - null null
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/favicon-32x32.png - 200 628 image/png 1.3715ms
+[2025-09-12 16:14:28 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - null null
+[2025-09-12 16:14:28 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.4948ms
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/swagger - null null
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/swagger - 301 0 null 21.0857ms
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/swagger/index.html - null null
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/swagger/index.html - 200 null text/html;charset=utf-8 2.6149ms
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/swagger/swagger-ui.css - null null
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/swagger/swagger-ui.css - 200 23647 text/css 1.0726ms
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/swagger/index.css - null null
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/swagger/swagger-ui-bundle.js - null null
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/swagger/swagger-ui-standalone-preset.js - null null
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/swagger/index.css - 200 152 text/css 0.7659ms
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/swagger/index.js - null null
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/swagger/swagger-ui-standalone-preset.js - 200 70860 text/javascript 62.0678ms
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/_framework/aspnetcore-browser-refresh.js - null null
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 0.2592ms
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/swagger/index.js - 200 null application/javascript;charset=utf-8 62.0314ms
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/swagger/swagger-ui-bundle.js - 200 417980 text/javascript 62.9295ms
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/_vs/browserLink - null null
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.0891ms
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/swagger/favicon-32x32.png - null null
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/swagger/favicon-32x32.png - 200 628 image/png 0.67ms
+[2025-09-12 16:15:13 INF] Request starting HTTP/1.1 GET http://localhost:5210/swagger/v1/swagger.json - null null
+[2025-09-12 16:15:13 INF] Request finished HTTP/1.1 GET http://localhost:5210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 1.8921ms
+[2025-09-12 16:15:37 INF] Request starting HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - null null
+[2025-09-12 16:15:37 INF] Request finished HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 1.0505ms
+[2025-09-12 16:15:38 INF] Request starting HTTP/2 GET https://localhost:7162/_vs/browserLink - null null
+[2025-09-12 16:15:38 INF] Request finished HTTP/2 GET https://localhost:7162/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.2205ms
+[2025-09-12 16:15:38 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - null null
+[2025-09-12 16:15:38 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 1.6468ms
+[2025-09-12 19:12:51 ERR] An error occurred using the connection to database 'myappdb' on server 'tcp://localhost:5432'.
+[2025-09-12 19:13:11 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 19:13:11 INF] Now listening on: https://localhost:54095
+[2025-09-12 19:13:11 INF] Now listening on: http://localhost:54097
+[2025-09-12 19:13:11 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 19:13:11 INF] Hosting environment: Development
+[2025-09-12 19:13:11 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 19:13:26 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/index.html - null null
+[2025-09-12 19:13:26 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/index.html - 200 null text/html;charset=utf-8 236.249ms
+[2025-09-12 19:13:26 INF] Request starting HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - null null
+[2025-09-12 19:13:26 INF] Request finished HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 10.183ms
+[2025-09-12 19:13:26 INF] Request starting HTTP/2 GET https://localhost:7162/_vs/browserLink - null null
+[2025-09-12 19:13:26 INF] Request finished HTTP/2 GET https://localhost:7162/_vs/browserLink - 200 null text/javascript; charset=UTF-8 223.1666ms
+[2025-09-12 19:13:27 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - null null
+[2025-09-12 19:13:27 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.3638ms
+[2025-09-12 19:35:46 ERR] An error occurred using the connection to database 'myappdb' on server 'tcp://localhost:5432'.
+[2025-09-12 19:37:14 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 19:37:14 INF] Now listening on: https://localhost:51754
+[2025-09-12 19:37:14 INF] Now listening on: http://localhost:51756
+[2025-09-12 19:37:15 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 19:37:15 INF] Hosting environment: Development
+[2025-09-12 19:37:15 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet
+[2025-09-12 19:37:19 INF] Request starting HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - null null
+[2025-09-12 19:37:19 INF] Request finished HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - 200 16501 application/javascript; charset=utf-8 16.9147ms
+[2025-09-12 19:37:19 INF] Request starting HTTP/2 GET https://localhost:7162/_vs/browserLink - null null
+[2025-09-12 19:37:19 INF] Request finished HTTP/2 GET https://localhost:7162/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.9794ms
+[2025-09-12 19:37:19 INF] Request starting HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - null null
+[2025-09-12 19:37:19 INF] Request finished HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.5438ms
+[2025-09-12 19:48:46 INF] User profile is available. Using 'C:\Users\Harold\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-12 19:48:46 INF] Now listening on: https://localhost:60081
+[2025-09-12 19:48:46 INF] Now listening on: http://localhost:60083
+[2025-09-12 19:48:47 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-12 19:48:47 INF] Hosting environment: Development
+[2025-09-12 19:48:47 INF] Content root path: C:\Users\Harold\IotFleet\IotFleet

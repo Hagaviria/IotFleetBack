@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "p2frLeEiA1rZ8usxOj5ATQjXzBztwa29CKqlMpNQ09c=",
+  "Source": "IotFleet",
+  "BasePath": "_content/IotFleet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

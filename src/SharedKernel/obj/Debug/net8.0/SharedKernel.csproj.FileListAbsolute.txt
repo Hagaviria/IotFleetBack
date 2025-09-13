@@ -1,0 +1,22 @@
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\bin\Debug\net8.0\SharedKernel.deps.json
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\bin\Debug\net8.0\SharedKernel.dll
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\bin\Debug\net8.0\SharedKernel.pdb
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\obj\Debug\net8.0\SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\obj\Debug\net8.0\SharedKernel.AssemblyInfoInputs.cache
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\obj\Debug\net8.0\SharedKernel.AssemblyInfo.cs
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\obj\Debug\net8.0\SharedKernel.csproj.CoreCompileInputs.cache
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\obj\Debug\net8.0\SharedKernel.dll
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\obj\Debug\net8.0\refint\SharedKernel.dll
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\obj\Debug\net8.0\SharedKernel.pdb
+I:\henry\Desktop\Henry\proyectos\Softhing\Lavadero Imperial\Codigo\Lavadero_Imperial_Back\scr\SharedKernel\obj\Debug\net8.0\ref\SharedKernel.dll
+C:\Users\Harold\IotFleet\src\SharedKernel\bin\Debug\net8.0\SharedKernel.deps.json
+C:\Users\Harold\IotFleet\src\SharedKernel\bin\Debug\net8.0\SharedKernel.dll
+C:\Users\Harold\IotFleet\src\SharedKernel\bin\Debug\net8.0\SharedKernel.pdb
+C:\Users\Harold\IotFleet\src\SharedKernel\obj\Debug\net8.0\SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Harold\IotFleet\src\SharedKernel\obj\Debug\net8.0\SharedKernel.AssemblyInfoInputs.cache
+C:\Users\Harold\IotFleet\src\SharedKernel\obj\Debug\net8.0\SharedKernel.AssemblyInfo.cs
+C:\Users\Harold\IotFleet\src\SharedKernel\obj\Debug\net8.0\SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\Harold\IotFleet\src\SharedKernel\obj\Debug\net8.0\SharedKernel.dll
+C:\Users\Harold\IotFleet\src\SharedKernel\obj\Debug\net8.0\refint\SharedKernel.dll
+C:\Users\Harold\IotFleet\src\SharedKernel\obj\Debug\net8.0\SharedKernel.pdb
+C:\Users\Harold\IotFleet\src\SharedKernel\obj\Debug\net8.0\ref\SharedKernel.dll

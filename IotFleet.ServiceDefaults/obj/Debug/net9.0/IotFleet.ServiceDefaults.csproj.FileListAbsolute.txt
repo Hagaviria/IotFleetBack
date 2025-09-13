@@ -1,0 +1,12 @@
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\bin\Debug\net9.0\IotFleet.ServiceDefaults.deps.json
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\bin\Debug\net9.0\IotFleet.ServiceDefaults.dll
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\bin\Debug\net9.0\IotFleet.ServiceDefaults.pdb
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\obj\Debug\net9.0\IotFleet.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\obj\Debug\net9.0\IotFleet.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\obj\Debug\net9.0\IotFleet.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\obj\Debug\net9.0\IotFleet.ServiceDefaults.AssemblyInfo.cs
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\obj\Debug\net9.0\IotFleet.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\obj\Debug\net9.0\IotFleet.ServiceDefaults.dll
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\obj\Debug\net9.0\refint\IotFleet.ServiceDefaults.dll
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\obj\Debug\net9.0\IotFleet.ServiceDefaults.pdb
+C:\Users\Harold\IotFleet\IotFleet.ServiceDefaults\obj\Debug\net9.0\ref\IotFleet.ServiceDefaults.dll

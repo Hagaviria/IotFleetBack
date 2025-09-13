@@ -1,0 +1,833 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Harold\\IotFleet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8ED991CD-FF3E-43BA-8813-FD8BAC70A4E4}|IotFleet.AppHost\\IotFleet.AppHost.csproj|c:\\users\\harold\\iotfleet\\iotfleet.apphost\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8ED991CD-FF3E-43BA-8813-FD8BAC70A4E4}|IotFleet.AppHost\\IotFleet.AppHost.csproj|solutionrelative:iotfleet.apphost\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|c:\\users\\harold\\iotfleet\\iotfleet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|solutionrelative:iotfleet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\harold\\iotfleet\\src\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|c:\\users\\harold\\iotfleet\\src\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|c:\\users\\harold\\iotfleet\\src\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\abstractions\\services\\iwebsocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\abstractions\\services\\iwebsocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\abstractions\\services\\ifuelpredictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\abstractions\\services\\ifuelpredictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\abstractions\\services\\ifleethub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\abstractions\\services\\ifleethub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|c:\\users\\harold\\iotfleet\\iotfleet\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|solutionrelative:iotfleet\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|c:\\users\\harold\\iotfleet\\iotfleet\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|solutionrelative:iotfleet\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|c:\\users\\harold\\iotfleet\\iotfleet\\iotfleet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|solutionrelative:iotfleet\\iotfleet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|c:\\users\\harold\\iotfleet\\iotfleet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|solutionrelative:iotfleet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|c:\\users\\harold\\iotfleet\\src\\infrastructure\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8ED991CD-FF3E-43BA-8813-FD8BAC70A4E4}|IotFleet.AppHost\\IotFleet.AppHost.csproj|c:\\users\\harold\\iotfleet\\iotfleet.apphost\\iotfleet.apphost.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8ED991CD-FF3E-43BA-8813-FD8BAC70A4E4}|IotFleet.AppHost\\IotFleet.AppHost.csproj|solutionrelative:iotfleet.apphost\\iotfleet.apphost.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|c:\\users\\harold\\iotfleet\\iotfleet\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|solutionrelative:iotfleet\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\features\\sensordata\\command\\ingestsensordatacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\sensordata\\command\\ingestsensordatacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\features\\user\\command\\usercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\user\\command\\usercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|c:\\users\\harold\\iotfleet\\src\\infrastructure\\services\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\services\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\features\\sensordata\\query\\getbyfleet\\getsensordatabyfleetqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\sensordata\\query\\getbyfleet\\getsensordatabyfleetqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\features\\sensordata\\query\\getbyfleet\\getsensordatabyfleetquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\sensordata\\query\\getbyfleet\\getsensordatabyfleetquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\features\\sensordata\\command\\ingestsensordatacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\sensordata\\command\\ingestsensordatacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\features\\sensordata\\command\\ingestsensordatavalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\sensordata\\command\\ingestsensordatavalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\harold\\iotfleet\\src\\domain\\errors\\vehicleerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\errors\\vehicleerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\harold\\iotfleet\\src\\domain\\errors\\usererrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\errors\\usererrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\harold\\iotfleet\\src\\domain\\errors\\sensordataerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\errors\\sensordataerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\harold\\iotfleet\\src\\domain\\models\\sensordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\models\\sensordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\harold\\iotfleet\\src\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\harold\\iotfleet\\src\\domain\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|c:\\users\\harold\\iotfleet\\src\\infrastructure\\services\\fuelpredictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\services\\fuelpredictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7117A768-2738-6E76-F0DF-C937E467D253}|IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj|c:\\users\\harold\\iotfleet\\iotfleet.servicedefaults\\iotfleet.servicedefaults.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7117A768-2738-6E76-F0DF-C937E467D253}|IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj|solutionrelative:iotfleet.servicedefaults\\iotfleet.servicedefaults.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1DA9BB8-A31F-5E76-AEF9-E74FC07EBD54}|src\\SharedKernel\\SharedKernel.csproj|c:\\users\\harold\\iotfleet\\src\\sharedkernel\\sharedkernel.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D1DA9BB8-A31F-5E76-AEF9-E74FC07EBD54}|src\\SharedKernel\\SharedKernel.csproj|solutionrelative:src\\sharedkernel\\sharedkernel.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8ED991CD-FF3E-43BA-8813-FD8BAC70A4E4}|IotFleet.AppHost\\IotFleet.AppHost.csproj|c:\\users\\harold\\iotfleet\\iotfleet.apphost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8ED991CD-FF3E-43BA-8813-FD8BAC70A4E4}|IotFleet.AppHost\\IotFleet.AppHost.csproj|solutionrelative:iotfleet.apphost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\features\\user\\query\\userqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\user\\query\\userqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\features\\user\\query\\usermanagementqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\user\\query\\usermanagementqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\features\\user\\command\\usermanagementcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\user\\command\\usermanagementcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|c:\\users\\harold\\iotfleet\\iotfleet\\infrastructure\\customresults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|solutionrelative:iotfleet\\infrastructure\\customresults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|c:\\users\\harold\\iotfleet\\iotfleet\\infrastructure\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|solutionrelative:iotfleet\\infrastructure\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\features\\user\\command\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\features\\user\\command\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|c:\\users\\harold\\iotfleet\\src\\application\\abstractions\\data\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDAB160-5258-45DA-1CDF-4BFCF367E785}|src\\Application\\Application.csproj|solutionrelative:src\\application\\abstractions\\data\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1DA9BB8-A31F-5E76-AEF9-E74FC07EBD54}|src\\SharedKernel\\SharedKernel.csproj|c:\\users\\harold\\iotfleet\\src\\sharedkernel\\errortype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1DA9BB8-A31F-5E76-AEF9-E74FC07EBD54}|src\\SharedKernel\\SharedKernel.csproj|solutionrelative:src\\sharedkernel\\errortype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1DA9BB8-A31F-5E76-AEF9-E74FC07EBD54}|src\\SharedKernel\\SharedKernel.csproj|c:\\users\\harold\\iotfleet\\src\\sharedkernel\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1DA9BB8-A31F-5E76-AEF9-E74FC07EBD54}|src\\SharedKernel\\SharedKernel.csproj|solutionrelative:src\\sharedkernel\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|c:\\users\\harold\\iotfleet\\iotfleet\\extensions\\applicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|solutionrelative:iotfleet\\extensions\\applicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|c:\\users\\harold\\iotfleet\\src\\infrastructure\\authentication\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\authentication\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|c:\\users\\harold\\iotfleet\\src\\infrastructure\\authentication\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\authentication\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|c:\\users\\harold\\iotfleet\\src\\infrastructure\\authentication\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\authentication\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|c:\\users\\harold\\iotfleet\\src\\infrastructure\\authentication\\tokenprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D745DFE-AF9A-E111-755D-FD3FFF280728}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\authentication\\tokenprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|c:\\users\\harold\\iotfleet\\iotfleet\\extensions\\migrationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D487D4DD-5C23-2539-1A3D-4F75A670264B}|IotFleet\\IotFleet.csproj|solutionrelative:iotfleet\\extensions\\migrationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IotFleet.csproj",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet\\IotFleet.csproj",
+              "RelativeDocumentMoniker": "IotFleet\\IotFleet.csproj",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet\\IotFleet.csproj",
+              "RelativeToolTip": "IotFleet\\IotFleet.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T20:07:55.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet\\appsettings.json",
+              "RelativeDocumentMoniker": "IotFleet\\appsettings.json",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet\\appsettings.json",
+              "RelativeToolTip": "IotFleet\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-12T21:01:36.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet.AppHost\\Program.cs",
+              "RelativeDocumentMoniker": "IotFleet.AppHost\\Program.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet.AppHost\\Program.cs",
+              "RelativeToolTip": "IotFleet.AppHost\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:50:22.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "IotFleet\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "IotFleet\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:27:48.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IFuelPredictionService.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Abstractions\\Services\\IFuelPredictionService.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Abstractions\\Services\\IFuelPredictionService.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Abstractions\\Services\\IFuelPredictionService.cs",
+              "RelativeToolTip": "src\\Application\\Abstractions\\Services\\IFuelPredictionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T23:07:42.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IWebSocketService.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Abstractions\\Services\\IWebSocketService.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Abstractions\\Services\\IWebSocketService.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Abstractions\\Services\\IWebSocketService.cs",
+              "RelativeToolTip": "src\\Application\\Abstractions\\Services\\IWebSocketService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T23:08:37.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Infrastructure.csproj",
+              "RelativeToolTip": "src\\Infrastructure\\Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T21:09:57.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "IotFleet\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet\\DependencyInjection.cs",
+              "RelativeToolTip": "IotFleet\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:42:06.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Program.cs",
+              "RelativeDocumentMoniker": "IotFleet\\Program.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Program.cs",
+              "RelativeToolTip": "IotFleet\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowDIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:20:13.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "IotFleet\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "IotFleet\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:27:34.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Domain.csproj",
+              "RelativeDocumentMoniker": "src\\Domain\\Domain.csproj",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Domain.csproj",
+              "RelativeToolTip": "src\\Domain\\Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T21:09:50.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAiwDQAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:42:47.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IFleetHub.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Abstractions\\Services\\IFleetHub.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Abstractions\\Services\\IFleetHub.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Abstractions\\Services\\IFleetHub.cs",
+              "RelativeToolTip": "src\\Application\\Abstractions\\Services\\IFleetHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T03:06:44.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\User\\Command\\UserCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\User\\Command\\UserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\User\\Command\\UserCommandHandler.cs",
+              "RelativeToolTip": "src\\Application\\Features\\User\\Command\\UserCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:30:56.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IngestSensorDataValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\SensorData\\Command\\IngestSensorDataValidator.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\SensorData\\Command\\IngestSensorDataValidator.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\SensorData\\Command\\IngestSensorDataValidator.cs",
+              "RelativeToolTip": "src\\Application\\Features\\SensorData\\Command\\IngestSensorDataValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T22:36:21.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IngestSensorDataCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\SensorData\\Command\\IngestSensorDataCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\SensorData\\Command\\IngestSensorDataCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\SensorData\\Command\\IngestSensorDataCommandHandler.cs",
+              "RelativeToolTip": "src\\Application\\Features\\SensorData\\Command\\IngestSensorDataCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T22:36:15.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "WebSocketService.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Services\\WebSocketService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Services\\WebSocketService.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Services\\WebSocketService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Services\\WebSocketService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T23:54:10.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IotFleet.AppHost.csproj",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet.AppHost\\IotFleet.AppHost.csproj",
+              "RelativeDocumentMoniker": "IotFleet.AppHost\\IotFleet.AppHost.csproj",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet.AppHost\\IotFleet.AppHost.csproj",
+              "RelativeToolTip": "IotFleet.AppHost\\IotFleet.AppHost.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T20:52:05.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Database\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Database\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Database\\ApplicationDbContext.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Database\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:37:08.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GetSensorDataByFleetQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\SensorData\\Query\\GetByFleet\\GetSensorDataByFleetQueryHandler.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\SensorData\\Query\\GetByFleet\\GetSensorDataByFleetQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\SensorData\\Query\\GetByFleet\\GetSensorDataByFleetQueryHandler.cs",
+              "RelativeToolTip": "src\\Application\\Features\\SensorData\\Query\\GetByFleet\\GetSensorDataByFleetQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T22:37:02.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GetSensorDataByFleetQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\SensorData\\Query\\GetByFleet\\GetSensorDataByFleetQuery.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\SensorData\\Query\\GetByFleet\\GetSensorDataByFleetQuery.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\SensorData\\Query\\GetByFleet\\GetSensorDataByFleetQuery.cs",
+              "RelativeToolTip": "src\\Application\\Features\\SensorData\\Query\\GetByFleet\\GetSensorDataByFleetQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T22:36:57.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\Application\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T00:04:32.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IngestSensorDataCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\SensorData\\Command\\IngestSensorDataCommand.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\SensorData\\Command\\IngestSensorDataCommand.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\SensorData\\Command\\IngestSensorDataCommand.cs",
+              "RelativeToolTip": "src\\Application\\Features\\SensorData\\Command\\IngestSensorDataCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T22:36:12.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SensorDataErrors.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Errors\\SensorDataErrors.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Errors\\SensorDataErrors.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Errors\\SensorDataErrors.cs",
+              "RelativeToolTip": "src\\Domain\\Errors\\SensorDataErrors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T23:04:59.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Application.csproj",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Application.csproj",
+              "RelativeDocumentMoniker": "src\\Application\\Application.csproj",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Application.csproj",
+              "RelativeToolTip": "src\\Application\\Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T20:14:04.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "VehicleErrors.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Errors\\VehicleErrors.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Errors\\VehicleErrors.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Errors\\VehicleErrors.cs",
+              "RelativeToolTip": "src\\Domain\\Errors\\VehicleErrors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T23:42:44.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SensorData.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Models\\SensorData.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Models\\SensorData.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Models\\SensorData.cs",
+              "RelativeToolTip": "src\\Domain\\Models\\SensorData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T23:42:13.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Models\\User.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Models\\User.cs",
+              "RelativeToolTip": "src\\Domain\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:09:33.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Models\\Vehicle.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Models\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Models\\Vehicle.cs",
+              "RelativeToolTip": "src\\Domain\\Models\\Vehicle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T23:42:25.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UserErrors.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Errors\\UserErrors.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Errors\\UserErrors.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Domain\\Errors\\UserErrors.cs",
+              "RelativeToolTip": "src\\Domain\\Errors\\UserErrors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:31:43.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FuelPredictionService.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Services\\FuelPredictionService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Services\\FuelPredictionService.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Services\\FuelPredictionService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Services\\FuelPredictionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T23:11:44.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SharedKernel.csproj",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\SharedKernel\\SharedKernel.csproj",
+              "RelativeDocumentMoniker": "src\\SharedKernel\\SharedKernel.csproj",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\SharedKernel\\SharedKernel.csproj",
+              "RelativeToolTip": "src\\SharedKernel\\SharedKernel.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T21:10:08.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet.AppHost\\appsettings.json",
+              "RelativeDocumentMoniker": "IotFleet.AppHost\\appsettings.json",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet.AppHost\\appsettings.json",
+              "RelativeToolTip": "IotFleet.AppHost\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-12T20:59:26.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UserQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\User\\Query\\UserQueryHandler.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\User\\Query\\UserQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\User\\Query\\UserQueryHandler.cs",
+              "RelativeToolTip": "src\\Application\\Features\\User\\Query\\UserQueryHandler.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwv0kAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:40:08.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IotFleet.ServiceDefaults.csproj",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj",
+              "RelativeDocumentMoniker": "IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj",
+              "RelativeToolTip": "IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T21:10:12.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UserManagementQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\User\\Query\\UserManagementQueryHandler.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\User\\Query\\UserManagementQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\User\\Query\\UserManagementQueryHandler.cs",
+              "RelativeToolTip": "src\\Application\\Features\\User\\Query\\UserManagementQueryHandler.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAADwv3IAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:39:54.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserManagementCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\User\\Command\\UserManagementCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\User\\Command\\UserManagementCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\User\\Command\\UserManagementCommandHandler.cs",
+              "RelativeToolTip": "src\\Application\\Features\\User\\Command\\UserManagementCommandHandler.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswD0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:39:50.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CustomResults.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Infrastructure\\CustomResults.cs",
+              "RelativeDocumentMoniker": "IotFleet\\Infrastructure\\CustomResults.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Infrastructure\\CustomResults.cs",
+              "RelativeToolTip": "IotFleet\\Infrastructure\\CustomResults.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:38:47.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Infrastructure\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "IotFleet\\Infrastructure\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Infrastructure\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "IotFleet\\Infrastructure\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:39:06.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "LoginCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\User\\Command\\LoginCommand.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Features\\User\\Command\\LoginCommand.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Features\\User\\Command\\LoginCommand.cs",
+              "RelativeToolTip": "src\\Application\\Features\\User\\Command\\LoginCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:38:01.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Abstractions\\Data\\IApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Abstractions\\Data\\IApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Abstractions\\Data\\IApplicationDbContext.cs",
+              "RelativeToolTip": "src\\Application\\Abstractions\\Data\\IApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:35:48.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ErrorType.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\SharedKernel\\ErrorType.cs",
+              "RelativeDocumentMoniker": "src\\SharedKernel\\ErrorType.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\SharedKernel\\ErrorType.cs",
+              "RelativeToolTip": "src\\SharedKernel\\ErrorType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:33:38.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Error.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\SharedKernel\\Error.cs",
+              "RelativeDocumentMoniker": "src\\SharedKernel\\Error.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\SharedKernel\\Error.cs",
+              "RelativeToolTip": "src\\SharedKernel\\Error.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:33:22.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ApplicationBuilderExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Extensions\\ApplicationBuilderExtensions.cs",
+              "RelativeDocumentMoniker": "IotFleet\\Extensions\\ApplicationBuilderExtensions.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Extensions\\ApplicationBuilderExtensions.cs",
+              "RelativeToolTip": "IotFleet\\Extensions\\ApplicationBuilderExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:29:46.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ClaimsPrincipalExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Authentication\\ClaimsPrincipalExtensions.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Authentication\\ClaimsPrincipalExtensions.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Authentication\\ClaimsPrincipalExtensions.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Authentication\\ClaimsPrincipalExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:19:29.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UserContext.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Authentication\\UserContext.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Authentication\\UserContext.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Authentication\\UserContext.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Authentication\\UserContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:19:24.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Authentication\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Authentication\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Authentication\\PasswordHasher.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Authentication\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:16:27.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "TokenProvider.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Authentication\\TokenProvider.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Authentication\\TokenProvider.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Authentication\\TokenProvider.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Authentication\\TokenProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwBwAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:16:26.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "MigrationExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Extensions\\MigrationExtensions.cs",
+              "RelativeDocumentMoniker": "IotFleet\\Extensions\\MigrationExtensions.cs",
+              "ToolTip": "C:\\Users\\Harold\\IotFleet\\IotFleet\\Extensions\\MigrationExtensions.cs",
+              "RelativeToolTip": "IotFleet\\Extensions\\MigrationExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T20:10:07.716Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

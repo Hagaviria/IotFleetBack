@@ -1,0 +1,7 @@
+C:\Users\Harold\IotFleet\src\Web.Api\obj\Debug\net9.0\Web.Api.csproj.AssemblyReference.cache
+C:\Users\Harold\IotFleet\src\Web.Api\obj\Debug\net9.0\Web.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Harold\IotFleet\src\Web.Api\obj\Debug\net9.0\Web.Api.AssemblyInfoInputs.cache
+C:\Users\Harold\IotFleet\src\Web.Api\obj\Debug\net9.0\Web.Api.AssemblyInfo.cs
+C:\Users\Harold\IotFleet\src\Web.Api\obj\Debug\net9.0\Web.Api.csproj.CoreCompileInputs.cache
+C:\Users\Harold\IotFleet\src\Web.Api\obj\Debug\net9.0\Web.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Harold\IotFleet\src\Web.Api\obj\Debug\net9.0\Web.Api.MvcApplicationPartsAssemblyInfo.cache

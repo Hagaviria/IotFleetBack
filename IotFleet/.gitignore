@@ -1,0 +1,21 @@
+# --- Visual Studio / .NET ---
+.vs/
+bin/
+obj/
+Debug/
+Release/
+*.user
+*.suo
+*.cache
+*.log
+*.db
+*.db-shm
+*.db-wal
+
+# --- Logs ---
+Logs/
+*.log
+
+# --- Configuraciones locales ---
+appsettings.Development.json
+*.tmp

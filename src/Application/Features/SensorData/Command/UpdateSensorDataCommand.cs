@@ -23,3 +23,4 @@ namespace Application.Features.SensorData.Command
         public double? AmbientTemperature { get; init; }
     }
 }
+

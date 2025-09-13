@@ -27,11 +27,7 @@ namespace Application.Features.User.Command
 
         public DateTime? Creado_en { get; set; }
 
-        public string Nombre_IPS { get; set; }
-
-        public string Codigo_IPS { get; set; }
-
-        public string Codigo_Habilitacion { get; set; }
+     
 
         public string Direccion { get; set; }
 
@@ -68,18 +64,14 @@ namespace Application.Features.User.Command
 
         public DateTime? Creado_en { get; set; }
 
-        public string Nombre_IPS { get; set; }
-
-        public string Codigo_IPS { get; set; }
-
-        public string Codigo_Habilitacion { get; set; }
+  
         public string Direccion { get; set; }
 
         public string TelefonoFijo { get; set; }
 
         public string TelefonoCelular { get; set; }
 
-        public DateTime? FechaNacimiento { get; set; }
+
 
         public string TipoIdentificacion { get; set; }
     }

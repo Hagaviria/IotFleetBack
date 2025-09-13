@@ -30,21 +30,17 @@ namespace Application.Features.User.Query
             if (user == null)
                 return Result.Failure<LoginResponseDTO>(Error.NotFound("User.NotFound", "User not found"));
 
-            // In a real application, you would verify the password hash here
-            // For now, we'll do a simple comparison
+       
             if (user.PasswordHash != Password)
                 return Result.Failure<LoginResponseDTO>(Error.Problem("User.InvalidPassword", "Invalid password"));
 
-            // In a real application, you would generate a JWT token here
+          
             var loginResponse = new LoginResponseDTO
             {
                 Identificacion = user.Id.ToString(),
                 Nombre = user.FirstName,
                 Correo = user.Email,
-                Token = "dummy-token", // In real app, generate JWT token
-                NombreIPS = "",
-                CodigoIPS = "",
-                CodigoHabilitacion = "",
+                Token = "dummy-token",
                 IdPerfil = 1,
                 NombrePerfil = user.Role
             };
@@ -70,11 +66,10 @@ namespace Application.Features.User.Query
             if (user == null)
                 return Result.Failure<List<UserPermissionsDTO>>(Error.NotFound("User.NotFound", "User not found"));
 
-            // TODO: Implement permissions logic when the entities are available
-            // For now, return empty permissions
+       
             var userPermissions = new UserPermissionsDTO
             {
-                ProfileId = 1, // Default profile
+                ProfileId = 1, 
                 Permissions = new List<ScreenPermission>()
             };
 

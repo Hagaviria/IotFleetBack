@@ -27,7 +27,7 @@ namespace Application.Features.User.Command
             if (string.IsNullOrWhiteSpace(user.Identificacion))
                 return Result.Failure<string>(Error.Problem("User.InvalidId", "User ID is required"));
 
-            // Check if user already exists
+  
             var existingUser = await context.Users
                 .AsNoTracking()
                 .FirstOrDefaultAsync(u => u.Email == user.Correo, cancellationToken);
@@ -41,7 +41,7 @@ namespace Application.Features.User.Command
                 Email = user.Correo,
                 FirstName = user.Nombre_completo,
                 LastName = "",
-                PasswordHash = user.Contraseña, // In real app, this should be hashed
+                PasswordHash = user.Contraseña, 
                 Role = "User",
                 CreatedAtDate = DateTime.UtcNow,
                 UpdatedAtDate = DateTime.UtcNow,

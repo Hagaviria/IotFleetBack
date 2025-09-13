@@ -10,9 +10,7 @@ namespace Domain.DTOs
         public required string Identificacion { get; set; } = string.Empty;
         public string Correo { get; set; } = string.Empty;
         public string Nombre { get; set; }
-        public string NombreIPS { get; set; }
-        public string CodigoIPS { get; set; }
-        public string CodigoHabilitacion { get; set; }
+
         public int IdPerfil { get; set; }
         public string NombrePerfil { get; set; }
     }

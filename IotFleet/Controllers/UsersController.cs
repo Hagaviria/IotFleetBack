@@ -16,7 +16,6 @@ namespace IotFleet.Controllers
         UserManagementQueryHandler userManagementQuery
         ) : ControllerBase
     {
-        // GET: api/Users
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
@@ -27,7 +26,6 @@ namespace IotFleet.Controllers
             );
         }
 
-        // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(string id)
         {
@@ -38,7 +36,6 @@ namespace IotFleet.Controllers
             );
         }
 
-        // POST: api/Users
         [HttpPost]
         public async Task<IActionResult> PostUser([FromBody] UserCreateCommand user)
         {
@@ -53,7 +50,6 @@ namespace IotFleet.Controllers
             );
         }
 
-        // PUT: api/Users/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(string id, [FromBody] UserUpdateCommand user)
         {
@@ -67,7 +63,6 @@ namespace IotFleet.Controllers
             );
         }
 
-        // DELETE: api/Users/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(string id)
         {

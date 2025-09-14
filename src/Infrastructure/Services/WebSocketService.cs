@@ -17,10 +17,8 @@ internal sealed class WebSocketService(
         {
             logger.LogInformation("Enviando alerta de combustible via WebSocket para vehículo {VehicleId}", alert.VehicleId);
             
-            // Enviar alerta solo a administradores
             await hubContext.Clients.Group("Admin").SendAsync("FuelAlert", alert);
             
-            // También enviar a usuarios específicos del vehículo
             await hubContext.Clients.Group($"Vehicle_{alert.VehicleId}").SendAsync("FuelAlert", alert);
             
             logger.LogDebug("Alerta de combustible enviada exitosamente");

@@ -29,7 +29,6 @@ namespace IotFleet.Controllers
         {
             try
             {
-                // Obtener alertas de combustible activas (últimas 24 horas)
                 var cutoffTime = DateTime.UtcNow.AddHours(-24);
                 
                 var alerts = await context.SensorData
@@ -48,7 +47,6 @@ namespace IotFleet.Controllers
                     .OrderByDescending(sd => sd.Timestamp)
                     .ToListAsync();
 
-                // Calcular alertas predictivas
                 var fuelAlerts = new List<FuelAlertDTO>();
                 
                 foreach (var alert in alerts)
@@ -182,7 +180,6 @@ namespace IotFleet.Controllers
 
                 if (fuelAlert != null)
                 {
-                    // Enviar alerta via WebSocket
                     await webSocketService.BroadcastAlert(fuelAlert);
                     
                     return CustomResults.Success<object>(fuelAlert, title: "Alert.Generated");
@@ -195,6 +192,62 @@ namespace IotFleet.Controllers
             catch (Exception ex)
             {
                 return CustomResults.Problem(Result.Failure(Error.Failure("Alerts.CalculationError", $"Error calculating fuel alert: {ex.Message}")));
+            }
+        }
+
+        /// <summary>
+        /// Generates predictive alerts for all vehicles.
+        /// </summary>
+        /// <returns>List of generated alerts.</returns>
+        [HttpPost("predictive/generate")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GeneratePredictiveAlerts()
+        {
+            try
+            {
+                var vehicles = await context.Vehicles
+                    .AsNoTracking()
+                    .ToListAsync();
+
+                var generatedAlerts = new List<object>();
+
+                foreach (var vehicle in vehicles)
+                {
+                    var latestSensorData = await context.SensorData
+                        .AsNoTracking()
+                        .Where(sd => sd.VehicleId == vehicle.Id)
+                        .OrderByDescending(sd => sd.Timestamp)
+                        .FirstOrDefaultAsync();
+
+                    if (latestSensorData != null)
+                    {
+                        var fuelAlert = await fuelPredictionService.CalculateFuelAutonomy(
+                            vehicle, 
+                            latestSensorData, 
+                            CancellationToken.None);
+
+                        if (fuelAlert != null)
+                        {
+                            await webSocketService.BroadcastAlert(fuelAlert);
+                            generatedAlerts.Add(new
+                            {
+                                VehicleId = vehicle.Id,
+                                LicensePlate = vehicle.LicensePlate,
+                                Alert = fuelAlert
+                            });
+                        }
+                    }
+                }
+
+                return CustomResults.Success<object>(new
+                {
+                    GeneratedAlerts = generatedAlerts.Count,
+                    Alerts = generatedAlerts
+                }, title: "Alerts.Generated");
+            }
+            catch (Exception ex)
+            {
+                return CustomResults.Problem(Result.Failure(Error.Failure("Alerts.GenerationError", $"Error generating predictive alerts: {ex.Message}")));
             }
         }
 

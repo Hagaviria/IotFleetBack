@@ -89,10 +89,8 @@ namespace IotFleet.Controllers
         {
             try
             {
-                // Test database connectivity
                 await context.Database.CanConnectAsync();
                 
-                // Get basic statistics
                 var vehicleCount = await context.Vehicles.CountAsync();
                 var sensorDataCount = await context.SensorData.CountAsync();
                 var userCount = await context.Users.CountAsync();

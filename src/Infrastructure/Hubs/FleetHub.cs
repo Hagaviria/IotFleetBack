@@ -64,7 +64,6 @@ public class FleetHub : Hub
     {
         _logger.LogInformation("Client connected: {ConnectionId}", Context.ConnectionId);
         
-        // Unirse automáticamente al grupo de administradores si es admin
         var userRole = Context.User?.FindFirst(ClaimTypes.Role)?.Value;
         if (userRole == "Admin")
         {
@@ -86,9 +85,6 @@ public class FleetHub : Hub
         await base.OnDisconnectedAsync(exception);
     }
 
-    /// <summary>
-    /// Sends real-time location update to all connected clients
-    /// </summary>
     public async Task SendLocationUpdate(string vehicleId, object locationData)
     {
         await Clients.All.SendAsync("LocationUpdate", new
@@ -99,9 +95,6 @@ public class FleetHub : Hub
         });
     }
 
-    /// <summary>
-    /// Sends real-time sensor data update to all connected clients
-    /// </summary>
     public async Task SendSensorDataUpdate(string vehicleId, object sensorData)
     {
         await Clients.All.SendAsync("SensorDataUpdate", new
@@ -112,9 +105,6 @@ public class FleetHub : Hub
         });
     }
 
-    /// <summary>
-    /// Sends alert to all connected clients
-    /// </summary>
     public async Task SendAlert(string vehicleId, object alert)
     {
         await Clients.All.SendAsync("AlertUpdate", new

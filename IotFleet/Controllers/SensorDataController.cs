@@ -51,14 +51,12 @@ namespace IotFleet.Controllers
             
             if (result.IsSuccess)
             {
-                // Obtener el vehículo para calcular alertas de combustible
                 var vehicle = await context.Vehicles
                     .AsNoTracking()
                     .FirstOrDefaultAsync(v => v.Id == sensorData.VehicleId);
 
                 if (vehicle != null)
                 {
-                    // Crear objeto SensorData para el cálculo
                     var sensorDataModel = new SensorData
                     {
                         VehicleId = sensorData.VehicleId,
@@ -73,7 +71,6 @@ namespace IotFleet.Controllers
                         Timestamp = DateTime.UtcNow
                     };
 
-                    // Calcular alerta de combustible
                     var fuelAlert = await fuelPredictionService.CalculateFuelAutonomy(
                         vehicle, 
                         sensorDataModel, 
@@ -81,11 +78,9 @@ namespace IotFleet.Controllers
 
                     if (fuelAlert != null)
                     {
-                        // Enviar alerta via WebSocket
                         await webSocketService.BroadcastAlert(fuelAlert);
                     }
 
-                    // Enviar datos de sensor via WebSocket
                     var sensorDataDto = new Domain.DTOs.SensorDataDTO(
                         sensorData.VehicleId,
                         sensorData.Latitude,

@@ -27,14 +27,12 @@ namespace IotFleet.Controllers
         {
             try
             {
-                // Verificar si ya hay datos
                 var hasUsers = await context.Users.AnyAsync();
                 if (hasUsers)
                 {
                     return CustomResults.Success<object>(new { message = "Database already seeded" });
                 }
 
-                // Crear usuarios de prueba
                 var adminUser = new User
                 {
                     Id = Guid.NewGuid(),
@@ -73,10 +71,8 @@ namespace IotFleet.Controllers
 
                 context.Users.AddRange(adminUser, operatorUser);
 
-                // Crear flota de prueba
                 var fleetId = Guid.NewGuid();
 
-                // Crear vehículos de prueba
                 var vehicles = new List<Vehicle>
                 {
                     new Vehicle
@@ -119,35 +115,28 @@ namespace IotFleet.Controllers
 
                 context.Vehicles.AddRange(vehicles);
 
-                // Crear datos de sensores de prueba
                 var sensorData = new List<SensorData>();
                 var random = new Random();
 
                 foreach (var vehicle in vehicles)
                 {
-                    // Crear datos históricos para los últimos 7 días
                     for (int day = 0; day < 7; day++)
                     {
                         var baseDate = DateTime.UtcNow.AddDays(-day);
                         
-                        // Crear 24 registros por día (uno por hora)
                         for (int hour = 0; hour < 24; hour++)
                         {
                             var timestamp = baseDate.AddHours(hour);
                             
-                            // Simular ubicaciones en Bogotá, Colombia
-                            var latitude = 4.6097 + (random.NextDouble() - 0.5) * 0.1; // ±0.05 grados
-                            var longitude = -74.0817 + (random.NextDouble() - 0.5) * 0.1; // ±0.05 grados
+                            var latitude = 4.6097 + (random.NextDouble() - 0.5) * 0.1;
+                            var longitude = -74.0817 + (random.NextDouble() - 0.5) * 0.1;
                             
-                            // Simular nivel de combustible decreciente
                             var fuelLevel = Math.Max(5, 100 - (day * 15) - (hour * 2) + random.Next(-5, 5));
                             
-                            // Simular velocidad basada en la hora del día
                             var speed = hour >= 6 && hour <= 9 || hour >= 17 && hour <= 19 
-                                ? random.Next(20, 40) // Hora pico
-                                : random.Next(40, 80); // Hora normal
+                                ? random.Next(20, 40)
+                                : random.Next(40, 80);
                             
-                            // Simular temperatura del motor
                             var engineTemperature = 85 + random.Next(-10, 15);
                             
                             sensorData.Add(new SensorData
@@ -197,7 +186,6 @@ namespace IotFleet.Controllers
         {
             try
             {
-                // Eliminar datos en orden correcto debido a las foreign keys
                 context.SensorData.RemoveRange(context.SensorData);
                 context.Vehicles.RemoveRange(context.Vehicles);
                 context.Users.RemoveRange(context.Users);

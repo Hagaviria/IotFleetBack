@@ -15,10 +15,6 @@ namespace IotFleet.Controllers
         IApplicationDbContext context
         ) : ControllerBase
     {
-        /// <summary>
-        /// Starts the vehicle simulation.
-        /// </summary>
-        /// <returns>Success message.</returns>
         [HttpPost("start")]
         public async Task<IActionResult> StartSimulation()
         {
@@ -33,10 +29,6 @@ namespace IotFleet.Controllers
             }
         }
 
-        /// <summary>
-        /// Stops the vehicle simulation.
-        /// </summary>
-        /// <returns>Success message.</returns>
         [HttpPost("stop")]
         public async Task<IActionResult> StopSimulation()
         {
@@ -51,10 +43,6 @@ namespace IotFleet.Controllers
             }
         }
 
-        /// <summary>
-        /// Gets the current simulation status.
-        /// </summary>
-        /// <returns>Simulation status information.</returns>
         [HttpGet("status")]
         public async Task<IActionResult> GetSimulationStatus()
         {
@@ -78,10 +66,6 @@ namespace IotFleet.Controllers
             }
         }
 
-        /// <summary>
-        /// Gets real-time sensor data for all vehicles.
-        /// </summary>
-        /// <returns>Latest sensor data for all vehicles.</returns>
         [HttpGet("realtime-data")]
         public async Task<IActionResult> GetRealTimeData()
         {
@@ -126,11 +110,6 @@ namespace IotFleet.Controllers
             }
         }
 
-        /// <summary>
-        /// Gets real-time sensor data for a specific vehicle.
-        /// </summary>
-        /// <param name="vehicleId">The vehicle ID.</param>
-        /// <returns>Latest sensor data for the specified vehicle.</returns>
         [HttpGet("realtime-data/{vehicleId}")]
         public async Task<IActionResult> GetRealTimeDataForVehicle(Guid vehicleId)
         {
@@ -179,53 +158,5 @@ namespace IotFleet.Controllers
             }
         }
 
-        /// <summary>
-        /// Gets diagnostic information about the simulation system.
-        /// </summary>
-        /// <returns>Diagnostic information including vehicles, sensor data, and simulation status.</returns>
-        [HttpGet("diagnostics")]
-        public async Task<IActionResult> GetDiagnostics()
-        {
-            try
-            {
-                var vehicles = await context.Vehicles.ToListAsync();
-                var totalSensorData = await context.SensorData.CountAsync();
-                var latestSensorData = await context.SensorData
-                    .OrderByDescending(s => s.Timestamp)
-                    .FirstOrDefaultAsync();
-                
-                var isRunning = await simulationService.IsSimulationRunningAsync();
-
-                var diagnostics = new
-                {
-                    SimulationStatus = new
-                    {
-                        IsRunning = isRunning,
-                        VehicleCount = vehicles.Count
-                    },
-                    DatabaseInfo = new
-                    {
-                        TotalVehicles = vehicles.Count,
-                        TotalSensorData = totalSensorData,
-                        LatestSensorDataTimestamp = latestSensorData?.Timestamp,
-                        LatestSensorDataVehicleId = latestSensorData?.VehicleId
-                    },
-                    Vehicles = vehicles.Select(v => new
-                    {
-                        v.Id,
-                        v.LicensePlate,
-                        v.Model,
-                        v.Brand,
-                        v.CreatedAt
-                    }).ToList()
-                };
-
-                return CustomResults.Success<object>(diagnostics);
-            }
-            catch (Exception ex)
-            {
-                return CustomResults.Problem(Result.Failure(Error.Failure("Simulation.DiagnosticsError", $"Error getting diagnostics: {ex.Message}")));
-            }
-        }
     }
 }

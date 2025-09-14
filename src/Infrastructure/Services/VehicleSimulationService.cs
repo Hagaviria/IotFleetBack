@@ -34,28 +34,21 @@ public class VehicleSimulationService : BackgroundService, IVehicleSimulationSer
 
     public async Task StartSimulationAsync()
     {
-        _logger.LogInformation("StartSimulationAsync called");
-        
         if (_isSimulationRunning)
         {
-            _logger.LogWarning("Simulation is already running");
             return;
         }
 
         using var scope = _serviceProvider.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<IApplicationDbContext>();
 
-        // Obtener vehículos existentes
         var vehicles = await context.Vehicles.ToListAsync();
-        _logger.LogInformation("Found {VehicleCount} vehicles for simulation", vehicles.Count);
         
         if (!vehicles.Any())
         {
-            _logger.LogWarning("No vehicles found for simulation");
             return;
         }
 
-        // Inicializar datos de simulación para cada vehículo
         _vehicleSimulations.Clear();
         foreach (var vehicle in vehicles)
         {
@@ -78,27 +71,22 @@ public class VehicleSimulationService : BackgroundService, IVehicleSimulationSer
         }
 
         _isSimulationRunning = true;
-        _simulationTimer.Change(0, 5000); // Actualizar cada 5 segundos
-        _logger.LogInformation("Vehicle simulation started with {VehicleCount} vehicles", vehicles.Count);
-        _logger.LogInformation("Simulation running status: {IsRunning}", _isSimulationRunning);
+        _simulationTimer.Change(0, 5000);
     }
 
     public async Task StopSimulationAsync()
     {
         if (!_isSimulationRunning)
         {
-            _logger.LogWarning("Simulation is not running");
             return;
         }
 
         _isSimulationRunning = false;
         _simulationTimer.Change(Timeout.Infinite, Timeout.Infinite);
-        _logger.LogInformation("Vehicle simulation stopped");
     }
 
     public async Task<bool> IsSimulationRunningAsync()
     {
-        _logger.LogInformation("IsSimulationRunningAsync called, returning: {IsRunning}", _isSimulationRunning);
         return _isSimulationRunning;
     }
 
@@ -148,14 +136,11 @@ public class VehicleSimulationService : BackgroundService, IVehicleSimulationSer
         var currentRoute = routes[simulation.RouteIndex];
         var waypoints = currentRoute.Waypoints;
 
-        // Calcular nueva posición
         var currentWaypoint = waypoints[simulation.WaypointIndex];
         var nextWaypointIndex = simulation.WaypointIndex + simulation.RouteDirection;
 
-        // Verificar si necesitamos cambiar de waypoint
         if (nextWaypointIndex < 0 || nextWaypointIndex >= waypoints.Count)
         {
-            // Cambiar dirección
             simulation.RouteDirection *= -1;
             simulation.WaypointIndex = Math.Max(0, Math.Min(waypoints.Count - 2, 
                 simulation.WaypointIndex + simulation.RouteDirection));
@@ -168,12 +153,10 @@ public class VehicleSimulationService : BackgroundService, IVehicleSimulationSer
             
             if (segmentDistance > 0)
             {
-                // Calcular progreso en el segmento
-                var distanceKm = (simulation.CurrentSpeed * 5) / 3600; // 5 segundos
+                var distanceKm = (simulation.CurrentSpeed * 5) / 3600;
                 var progressChange = distanceKm / segmentDistance;
                 simulation.WaypointProgress += progressChange;
 
-                // Si completamos el segmento, avanzar al siguiente waypoint
                 if (simulation.WaypointProgress >= 1)
                 {
                     simulation.WaypointIndex = nextWaypointIndex;
@@ -182,7 +165,6 @@ public class VehicleSimulationService : BackgroundService, IVehicleSimulationSer
             }
         }
 
-        // Calcular nueva posición
         var finalCurrentWaypoint = waypoints[simulation.WaypointIndex];
         var finalNextWaypointIndex = simulation.WaypointIndex + simulation.RouteDirection;
         
@@ -196,15 +178,12 @@ public class VehicleSimulationService : BackgroundService, IVehicleSimulationSer
                 (finalNextWaypoint.Lng - finalCurrentWaypoint.Lng) * simulation.WaypointProgress;
         }
 
-        // Simular comportamiento del conductor
         var newSpeed = CalculateRealisticSpeed(simulation);
         simulation.CurrentSpeed = newSpeed;
 
-        // Simular consumo de combustible
-        var fuelConsumption = (newSpeed * 5) / 3600 * 0.1; // 0.1L por km
+        var fuelConsumption = (newSpeed * 5) / 3600 * 0.1;
         simulation.CurrentFuelLevel = Math.Max(0, simulation.CurrentFuelLevel - fuelConsumption);
 
-        // Crear nuevo registro de sensor
         var sensorData = new SensorData
         {
             Id = Guid.NewGuid(),
@@ -223,10 +202,8 @@ public class VehicleSimulationService : BackgroundService, IVehicleSimulationSer
         context.SensorData.Add(sensorData);
         simulation.LastUpdate = DateTime.UtcNow;
 
-        // Enviar actualización via SignalR
         await SendRealTimeUpdate(simulation.VehicleId, sensorData);
 
-        // Limitar registros históricos (mantener solo los últimos 1000 por vehículo)
         var oldRecords = await context.SensorData
             .Where(s => s.VehicleId == simulation.VehicleId)
             .OrderByDescending(s => s.Timestamp)
@@ -284,7 +261,6 @@ public class VehicleSimulationService : BackgroundService, IVehicleSimulationSer
 
     private double CalculateDirection(double lat1, double lng1)
     {
-        // Simular dirección basada en la posición
         return _random.Next(0, 360);
     }
 
@@ -297,13 +273,11 @@ public class VehicleSimulationService : BackgroundService, IVehicleSimulationSer
         var speedVariation = (_random.NextDouble() - 0.5) * 8;
         targetSpeed += speedVariation;
 
-        // Simular paradas ocasionales
         if (_random.NextDouble() < behavior.StopProbability)
         {
             targetSpeed = Math.Max(0, targetSpeed - 15);
         }
 
-        // Aceleración gradual
         var speedDifference = targetSpeed - simulation.CurrentSpeed;
         var maxAcceleration = 5.0;
         var acceleration = Math.Sign(speedDifference) * Math.Min(Math.Abs(speedDifference), maxAcceleration * 0.1);
@@ -385,7 +359,6 @@ public class VehicleSimulationService : BackgroundService, IVehicleSimulationSer
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        // El servicio se ejecuta en background
         await Task.Delay(Timeout.Infinite, stoppingToken);
     }
 

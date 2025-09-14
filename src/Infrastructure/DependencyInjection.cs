@@ -46,7 +46,6 @@ public static class DependencyInjection
         services.AddScoped<IFuelPredictionService, FuelPredictionService>();
         services.AddScoped<IWebSocketService, WebSocketService>();
         
-        // Register Simulation services
         services.AddSingleton<IVehicleSimulationService, VehicleSimulationService>();
         services.AddSingleton<IHostedService>(provider => provider.GetRequiredService<IVehicleSimulationService>() as VehicleSimulationService);
 

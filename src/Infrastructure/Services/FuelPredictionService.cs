@@ -19,22 +19,17 @@ internal sealed class FuelPredictionService(ILogger<FuelPredictionService> logge
         {
             logger.LogDebug("Calculando autonomía de combustible para vehículo {VehicleId}", vehicle.Id);
 
-            // Calcular combustible actual en litros
             var currentFuelLiters = (sensorData.FuelLevel / 100) * vehicle.FuelCapacity;
             
-            // Calcular consumo actual basado en velocidad y consumo promedio
             var currentConsumption = CalculateCurrentConsumption(vehicle, sensorData);
             
-            // Calcular autonomía en horas
             var autonomyHours = currentConsumption > 0 ? currentFuelLiters / currentConsumption : 0;
             
-            // Calcular distancia restante en km
-            var remainingDistance = autonomyHours * (sensorData.Speed ?? 50); // Velocidad promedio si no hay datos
+            var remainingDistance = autonomyHours * (sensorData.Speed ?? 50);
             
             logger.LogDebug("Autonomía calculada: {AutonomyHours} horas ({RemainingDistance} km) para vehículo {VehicleId}", 
                 autonomyHours, remainingDistance, vehicle.Id);
             
-            // Generar alerta si la autonomía es menor a 1 hora
             if (autonomyHours < 1.0)
             {
                 var severity = DetermineSeverity(autonomyHours, sensorData.FuelLevel);
@@ -66,25 +61,20 @@ internal sealed class FuelPredictionService(ILogger<FuelPredictionService> logge
 
     private double CalculateCurrentConsumption(Vehicle vehicle, SensorData sensorData)
     {
-        // Si tenemos consumo directo del sensor, usarlo
         if (sensorData.FuelConsumption.HasValue && sensorData.FuelConsumption > 0)
         {
             return sensorData.FuelConsumption.Value;
         }
 
-        // Calcular consumo basado en velocidad y consumo promedio del vehículo
-        var speed = sensorData.Speed ?? 50; // Velocidad promedio si no hay datos
+        var speed = sensorData.Speed ?? 50;
         
-        // Factor de consumo basado en velocidad (más velocidad = más consumo)
         var speedFactor = Math.Max(0.5, Math.Min(2.0, speed / 60.0));
         
-        // Consumo base del vehículo ajustado por velocidad
         var calculatedConsumption = vehicle.AverageConsumption * speedFactor;
         
-        // Ajustar por temperatura del motor (temperatura alta = más consumo)
         if (sensorData.EngineTemperature > 90)
         {
-            calculatedConsumption *= 1.2; // 20% más consumo si el motor está caliente
+            calculatedConsumption *= 1.2;
         }
         
         return calculatedConsumption;

@@ -31,18 +31,15 @@ namespace IotFleet.Controllers
             {
                 var query = context.SensorData.AsNoTracking();
 
-                // Filter by vehicle if provided
                 if (!string.IsNullOrEmpty(vehicleId) && Guid.TryParse(vehicleId, out var vehicleIdGuid))
                 {
                     query = query.Where(sd => sd.VehicleId == vehicleIdGuid);
                 }
 
-                // Filter by date range
                 var start = startDate ?? DateTime.UtcNow.AddDays(-7);
                 var end = endDate ?? DateTime.UtcNow;
                 query = query.Where(sd => sd.Timestamp >= start && sd.Timestamp <= end);
 
-                // Group by date to create route segments
                 var routes = await query
                     .Include(sd => sd.Vehicle)
                     .OrderBy(sd => sd.Timestamp)
@@ -255,7 +252,6 @@ namespace IotFleet.Controllers
             var firstFuel = (double)firstPoint.GetType().GetProperty("FuelLevel")!.GetValue(firstPoint)!;
             var lastFuel = (double)lastPoint.GetType().GetProperty("FuelLevel")!.GetValue(lastPoint)!;
             
-            // Assuming fuel level is a percentage (0-100)
             var fuelUsed = firstFuel - lastFuel;
             return Math.Max(0, fuelUsed);
         }
@@ -267,7 +263,6 @@ namespace IotFleet.Controllers
             
             if (fuelConsumption <= 0) return 0;
             
-            // Return km per liter
             return Math.Round(totalDistance / fuelConsumption, 2);
         }
     }

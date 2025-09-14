@@ -148,19 +148,7 @@ dotnet test --logger "console;verbosity=detailed"
 - [ ] ✅ Tests del backend pasan (26/30)
 - [ ] ✅ Cobertura de código > 80%
 
-### 2. **Comandos de Verificación**
 
-```bash
-# Verificar backend
-curl -k https://localhost:7162/health
-curl -k https://localhost:7162/api/vehicles
-
-# Verificar base de datos
-psql -h localhost -U iotfleet_user -d iotfleet_db -c "SELECT COUNT(*) FROM \"Vehicles\";"
-
-# Verificar tests
-cd src/Infrastructure.Tests && dotnet test
-```
 
 ---
 

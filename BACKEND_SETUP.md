@@ -20,7 +20,7 @@ Esta guía te permitirá configurar y ejecutar el **Backend del IoT Fleet Manage
 - **pgAdmin** (opcional, para gestión visual)
 
 #### **Herramientas Adicionales**
-- **Docker Desktop** (opcional, para containerización)
+- **Docker Desktop**
 - **Postman** o **Insomnia** (para testing de API)
 
 ### Verificación de Requisitos

@@ -4,6 +4,10 @@ using SharedKernel;
 using Application.Features.SensorData.Command;
 using Application.Features.SensorData.Query;
 using IotFleet.Infrastructure;
+using Application.Abstractions.Services;
+using Application.Abstractions.Data;
+using Microsoft.EntityFrameworkCore;
+using Domain.Models;
 
 namespace IotFleet.Controllers
 {
@@ -11,7 +15,10 @@ namespace IotFleet.Controllers
     [Route("api/[controller]")]
     public class SensorDataController(
         SensorDataCommandHandler sensorDataCommand,
-        SensorDataQueryHandler sensorDataQuery
+        SensorDataQueryHandler sensorDataQuery,
+        IFuelPredictionService fuelPredictionService,
+        IWebSocketService webSocketService,
+        IApplicationDbContext context
         ) : ControllerBase
     {
         [HttpGet]
@@ -41,6 +48,61 @@ namespace IotFleet.Controllers
                 return CustomResults.Problem(Result.Failure(Error.Problem("General.ModelInvalid", ModelState.SerializeModelStateErrors())));
 
             var result = await sensorDataCommand.IngestSensorDataAsync(sensorData, new CancellationToken());
+            
+            if (result.IsSuccess)
+            {
+                // Obtener el vehículo para calcular alertas de combustible
+                var vehicle = await context.Vehicles
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(v => v.Id == sensorData.VehicleId);
+
+                if (vehicle != null)
+                {
+                    // Crear objeto SensorData para el cálculo
+                    var sensorDataModel = new SensorData
+                    {
+                        VehicleId = sensorData.VehicleId,
+                        Latitude = sensorData.Latitude,
+                        Longitude = sensorData.Longitude,
+                        Altitude = sensorData.Altitude,
+                        Speed = sensorData.Speed,
+                        FuelLevel = sensorData.FuelLevel,
+                        FuelConsumption = sensorData.FuelConsumption,
+                        EngineTemperature = sensorData.EngineTemperature,
+                        AmbientTemperature = sensorData.AmbientTemperature,
+                        Timestamp = DateTime.UtcNow
+                    };
+
+                    // Calcular alerta de combustible
+                    var fuelAlert = await fuelPredictionService.CalculateFuelAutonomy(
+                        vehicle, 
+                        sensorDataModel, 
+                        new CancellationToken());
+
+                    if (fuelAlert != null)
+                    {
+                        // Enviar alerta via WebSocket
+                        await webSocketService.BroadcastAlert(fuelAlert);
+                    }
+
+                    // Enviar datos de sensor via WebSocket
+                    var sensorDataDto = new Domain.DTOs.SensorDataDTO(
+                        sensorData.VehicleId,
+                        sensorData.Latitude,
+                        sensorData.Longitude,
+                        sensorData.Altitude,
+                        sensorData.Speed,
+                        sensorData.FuelLevel,
+                        sensorData.FuelConsumption,
+                        sensorData.EngineTemperature,
+                        sensorData.AmbientTemperature,
+                        DateTime.UtcNow
+                    );
+                    
+                    await webSocketService.BroadcastSensorData(sensorDataDto);
+                }
+            }
+
             return result.Match(
                 value => CustomResults.Success(title: "SensorData.Created",
                 result: value, status: StatusCodes.Status201Created),

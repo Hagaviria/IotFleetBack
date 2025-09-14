@@ -36,7 +36,7 @@ namespace Application.Features.User.Command
             // In a real application, you would verify the old password here
             // For now, we'll just update the password
             user.PasswordHash = command.NewPassword; // In real app, this should be hashed
-            user.UpdatedAtDate = DateTime.UtcNow;
+            user.UpdatedAt = DateTime.UtcNow;
 
             await context.SaveChangesAsync(cancellationToken);
 

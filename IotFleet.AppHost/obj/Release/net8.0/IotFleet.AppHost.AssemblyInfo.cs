@@ -18,15 +18,15 @@ using System.Reflection;
     "ext\\")]
 [assembly: System.Reflection.AssemblyMetadata("dcpbinpath", "C:\\Users\\Harold\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\9.4.2\\tools\\" +
     "ext\\bin\\")]
-[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\Users\\Harold\\IotFleet\\IotFleet.AppHost")]
+[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\IotFleet.AppHost")]
 [assembly: System.Reflection.AssemblyMetadata("apphostprojectname", "IotFleet.AppHost.csproj")]
 [assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", "C:\\Users\\Harold\\.nuget\\packages\\aspire.dashboard.sdk.win-x64\\9.4.2\\tools\\Aspire.D" +
     "ashboard.exe")]
-[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\Users\\Harold\\IotFleet\\IotFleet.AppHost\\obj\\")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\IotFleet.AppHost\\obj\\")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("IotFleet.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4940edf08f097b776dee464bfc2725e72b04585a")]
 [assembly: System.Reflection.AssemblyProductAttribute("IotFleet.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IotFleet.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

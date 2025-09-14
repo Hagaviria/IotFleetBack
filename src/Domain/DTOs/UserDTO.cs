@@ -12,8 +12,8 @@ namespace Domain.DTOs
         public string LastName { get; set; }
         public string PasswordHash { get; set; }
         public string Role { get; set; }
-        public DateTime CreatedAtDate { get; set; }
-        public DateTime UpdatedAtDate { get; set; }
-        public bool USU_ESTADO { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public bool IsActive { get; set; }
     }
 }

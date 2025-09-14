@@ -1,4 +1,5 @@
-﻿using Application.Abstractions.Data;
+﻿using Application.Abstractions.Authentication;
+using Application.Abstractions.Data;
 using Domain.Models;
 using Domain.DTOs;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,9 @@ using System.Threading.Tasks;
 namespace Application.Features.User.Query
 {
     public class UserManagementQueryHandler(
-        IApplicationDbContext context
+        IApplicationDbContext context,
+        IPasswordHasher passwordHasher,
+        ITokenProvider tokenProvider
         )
     {
         /// <summary>
@@ -25,24 +28,26 @@ namespace Application.Features.User.Query
         {
             var user = await context.Users
                 .AsNoTracking()
-                .FirstOrDefaultAsync(u => u.Email == Email && u.USU_ESTADO, cancellationToken);
+                .FirstOrDefaultAsync(u => u.Correo == Email && u.Estado, cancellationToken);
 
             if (user == null)
                 return Result.Failure<LoginResponseDTO>(Error.NotFound("User.NotFound", "User not found"));
 
        
-            if (user.PasswordHash != Password)
+            if (!passwordHasher.Verify(Password, user.PasswordHash))
                 return Result.Failure<LoginResponseDTO>(Error.Problem("User.InvalidPassword", "Invalid password"));
 
           
+            string token = tokenProvider.Create(user);
+
             var loginResponse = new LoginResponseDTO
             {
                 Identificacion = user.Id.ToString(),
-                Nombre = user.FirstName,
-                Correo = user.Email,
-                Token = "dummy-token",
-                IdPerfil = 1,
-                NombrePerfil = user.Role
+                Nombre = user.Nombre_completo,
+                Correo = user.Correo,
+                Token = token,
+                IdPerfil = user.Id_perfil,
+                NombrePerfil = user.Nombre_perfil
             };
 
             return Result.Success(loginResponse);
@@ -61,7 +66,7 @@ namespace Application.Features.User.Query
 
             var user = await context.Users
                 .AsNoTracking()
-                .FirstOrDefaultAsync(u => u.Id == userIdGuid && u.USU_ESTADO, cancellationToken);
+                .FirstOrDefaultAsync(u => u.Id == userIdGuid && u.Estado, cancellationToken);
 
             if (user == null)
                 return Result.Failure<List<UserPermissionsDTO>>(Error.NotFound("User.NotFound", "User not found"));

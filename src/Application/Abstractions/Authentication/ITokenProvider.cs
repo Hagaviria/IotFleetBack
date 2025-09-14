@@ -4,12 +4,7 @@ namespace Application.Abstractions.Authentication;
 
 public interface ITokenProvider
 {
+    string Create(User user);
     string GenerateJWTToken(User user);
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="token"></param>
-    /// <returns></returns>
     UserDTO ValidateToken(string token);
 }

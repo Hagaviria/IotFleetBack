@@ -24,7 +24,7 @@ namespace IotFleet.Controllers
             {
                 var vehicleCount = await context.Vehicles.CountAsync();
                 var sensorDataCount = await context.SensorData.CountAsync();
-                var userCount = await context.Users.CountAsync(u => u.USU_ESTADO);
+                var userCount = await context.Users.CountAsync(u => u.Estado);
 
                 var statistics = new
                 {

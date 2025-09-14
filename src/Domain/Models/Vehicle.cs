@@ -10,7 +10,7 @@ public class Vehicle
     public string Brand { get; set; }
     public double FuelCapacity { get; set; } 
     public double AverageConsumption { get; set; } 
-    public Guid FleetId { get; set; }
+    public Guid? FleetId { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime? LastMaintenance { get; set; }
 }

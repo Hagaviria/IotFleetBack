@@ -5,6 +5,83 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Alerts/fuel-alerts": {
+      "get": {
+        "tags": [
+          "Alerts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alerts/fuel-alerts/statistics": {
+      "get": {
+        "tags": [
+          "Alerts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alerts/fuel-alerts/calculate/{vehicleId}": {
+      "post": {
+        "tags": [
+          "Alerts"
+        ],
+        "parameters": [
+          {
+            "name": "vehicleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alerts/vehicle/{vehicleId}/recent": {
+      "get": {
+        "tags": [
+          "Alerts"
+        ],
+        "parameters": [
+          {
+            "name": "vehicleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "hours",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 24
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Dashboard/statistics": {
       "get": {
         "tags": [
@@ -124,6 +201,28 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SeedData": {
+      "post": {
+        "tags": [
+          "SeedData"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "SeedData"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -668,7 +767,6 @@
         "required": [
           "AverageConsumption",
           "Brand",
-          "FleetId",
           "FuelCapacity",
           "LicensePlate",
           "Model"
@@ -702,7 +800,8 @@
           },
           "FleetId": {
             "type": "string",
-            "format": "uuid"
+            "format": "uuid",
+            "nullable": true
           },
           "LastMaintenance": {
             "type": "string",
@@ -829,7 +928,6 @@
         "required": [
           "AverageConsumption",
           "Brand",
-          "FleetId",
           "FuelCapacity",
           "LicensePlate",
           "Model"
@@ -863,7 +961,8 @@
           },
           "FleetId": {
             "type": "string",
-            "format": "uuid"
+            "format": "uuid",
+            "nullable": true
           },
           "LastMaintenance": {
             "type": "string",
@@ -909,18 +1008,6 @@
           "Creado_en": {
             "type": "string",
             "format": "date-time",
-            "nullable": true
-          },
-          "Nombre_IPS": {
-            "type": "string",
-            "nullable": true
-          },
-          "Codigo_IPS": {
-            "type": "string",
-            "nullable": true
-          },
-          "Codigo_Habilitacion": {
-            "type": "string",
             "nullable": true
           },
           "Direccion": {
@@ -983,18 +1070,6 @@
           "Creado_en": {
             "type": "string",
             "format": "date-time",
-            "nullable": true
-          },
-          "Nombre_IPS": {
-            "type": "string",
-            "nullable": true
-          },
-          "Codigo_IPS": {
-            "type": "string",
-            "nullable": true
-          },
-          "Codigo_Habilitacion": {
-            "type": "string",
             "nullable": true
           },
           "Direccion": {

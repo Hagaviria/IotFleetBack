@@ -10,5 +10,5 @@ public class IotFleet_AppHost
 #pragma warning restore CS8981
 {
     private IotFleet_AppHost() { }
-    public static string ProjectPath => """C:\Users\Harold\IotFleet\IotFleet.AppHost""";
+    public static string ProjectPath => """C:\Users\Harold\PruebaTecnica\IotFleet\IotFleet.AppHost""";
 }

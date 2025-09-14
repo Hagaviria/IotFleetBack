@@ -25,8 +25,7 @@ namespace Application.Features.Vehicle.Command
         [Range(0.1, double.MaxValue, ErrorMessage = "Average consumption must be greater than 0")]
         public double AverageConsumption { get; init; }
 
-        [Required]
-        public Guid FleetId { get; init; }
+        public Guid? FleetId { get; init; }
 
         public DateTime? LastMaintenance { get; init; }
     }
@@ -53,8 +52,7 @@ namespace Application.Features.Vehicle.Command
         [Range(0.1, double.MaxValue, ErrorMessage = "Average consumption must be greater than 0")]
         public double AverageConsumption { get; init; }
 
-        [Required]
-        public Guid FleetId { get; init; }
+        public Guid? FleetId { get; init; }
 
         public DateTime? LastMaintenance { get; init; }
     }

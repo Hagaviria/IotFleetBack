@@ -71,7 +71,7 @@ namespace Application.Features.User.Command
 
         public string TelefonoCelular { get; set; }
 
-
+        public DateTime? FechaNacimiento { get; set; }
 
         public string TipoIdentificacion { get; set; }
     }

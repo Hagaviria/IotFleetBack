@@ -16,6 +16,7 @@ namespace Infrastructure.Database
         public DbSet<User> Users { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<SensorData> SensorData { get; set; }
+        public DbSet<Fleet> Fleets { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +25,7 @@ namespace Infrastructure.Database
             ConfigureUser(modelBuilder);
             ConfigureVehicle(modelBuilder);
             ConfigureSensorData(modelBuilder);
+            ConfigureFleet(modelBuilder);
         }
         
         
@@ -33,22 +35,53 @@ namespace Infrastructure.Database
             {
                 entity.HasKey(u => u.Id);
                 
-                entity.Property(u => u.Email)
+                entity.Property(u => u.Identificacion)
+                    .IsRequired()
+                    .HasMaxLength(50);
+                    
+                entity.Property(u => u.Nombre_completo)
+                    .IsRequired()
+                    .HasMaxLength(200);
+                    
+                entity.Property(u => u.Correo)
                     .IsRequired()
                     .HasMaxLength(255);
                     
                 entity.Property(u => u.PasswordHash)
                     .IsRequired();
                     
-                entity.Property(u => u.FirstName)
-                    .IsRequired()
-                    .HasMaxLength(100);
+                entity.Property(u => u.Id_perfil)
+                    .IsRequired();
                     
-                entity.Property(u => u.LastName)
+                entity.Property(u => u.Nombre_perfil)
                     .IsRequired()
-                    .HasMaxLength(100);
+                    .HasMaxLength(50);
+                    
+                entity.Property(u => u.Estado)
+                    .IsRequired();
+                    
+                entity.Property(u => u.Creado_en)
+                    .IsRequired();
+                    
+                entity.Property(u => u.UpdatedAt)
+                    .IsRequired();
+                    
+                entity.Property(u => u.Direccion)
+                    .HasMaxLength(500);
+                    
+                entity.Property(u => u.TelefonoFijo)
+                    .HasMaxLength(20);
+                    
+                entity.Property(u => u.TelefonoCelular)
+                    .HasMaxLength(20);
+                    
+                entity.Property(u => u.TipoIdentificacion)
+                    .HasMaxLength(10);
                 
-                entity.HasIndex(u => u.Email)
+                entity.HasIndex(u => u.Correo)
+                    .IsUnique();
+                    
+                entity.HasIndex(u => u.Identificacion)
                     .IsUnique();
             });
         }
@@ -128,6 +161,24 @@ namespace Infrastructure.Database
                 entity.HasIndex(s => s.VehicleId);
                 
                 entity.HasIndex(s => new { s.VehicleId, s.FuelLevel, s.Timestamp });
+            });
+        }
+        
+        private static void ConfigureFleet(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Fleet>(entity =>
+            {
+                entity.HasKey(f => f.Id);
+                
+                entity.Property(f => f.Name)
+                    .IsRequired()
+                    .HasMaxLength(100);
+                    
+                entity.Property(f => f.Description)
+                    .HasMaxLength(500);
+                
+                entity.HasIndex(f => f.Name)
+                    .IsUnique();
             });
         }
     }

@@ -13,6 +13,11 @@ namespace Infrastructure.Authentication;
 
 internal sealed class TokenProvider(IConfiguration configuration) : ITokenProvider
 {
+    public string Create(User user)
+    {
+        return GenerateJWTToken(user);
+    }
+
     public string GenerateJWTToken(User userInfo)
     {
         string _secretKey = configuration["Jwt:Secret"]!;
@@ -26,8 +31,8 @@ internal sealed class TokenProvider(IConfiguration configuration) : ITokenProvid
         var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
         var claims = new[]
         {
-                new Claim(JwtRegisteredClaimNames.Sub, userInfo.FirstName),
-                new Claim(ClaimTypes.Role, userInfo.Role),
+                new Claim(JwtRegisteredClaimNames.Sub, userInfo.Nombre_completo),
+                new Claim(ClaimTypes.Role, userInfo.Id_perfil == 1 ? "Admin" : "User"),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             };
         var tokenDescritor = new JwtSecurityToken(

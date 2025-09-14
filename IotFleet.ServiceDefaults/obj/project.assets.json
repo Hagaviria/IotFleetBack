@@ -1998,11 +1998,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Harold\\IotFleet\\IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj",
+      "projectUniqueName": "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj",
       "projectName": "IotFleet.ServiceDefaults",
-      "projectPath": "C:\\Users\\Harold\\IotFleet\\IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj",
+      "projectPath": "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj",
       "packagesPath": "C:\\Users\\Harold\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Harold\\IotFleet\\IotFleet.ServiceDefaults\\obj\\",
+      "outputPath": "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\IotFleet.ServiceDefaults\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

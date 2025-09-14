@@ -23,7 +23,7 @@ namespace Application.Features.User.Query
 
             var user = await context.Users
                 .AsNoTracking()
-                .FirstOrDefaultAsync(u => u.Id == userIdGuid && u.USU_ESTADO, cancellationToken);
+                .FirstOrDefaultAsync(u => u.Id == userIdGuid && u.Estado, cancellationToken);
 
             if (user == null)
                 return Result.Failure<UserEntity>(Error.NotFound("User.NotFound", "User not found"));
@@ -35,7 +35,7 @@ namespace Application.Features.User.Query
         {
             var users = await context.Users
                 .AsNoTracking()
-                .Where(u => u.USU_ESTADO)
+                .Where(u => u.Estado)
                 .ToListAsync(cancellationToken);
 
             return Result.Success(users);

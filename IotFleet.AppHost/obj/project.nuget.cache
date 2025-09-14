@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "avCw0IN4n8E=",
+  "dgSpecHash": "7teXxa47tt4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Harold\\IotFleet\\IotFleet.AppHost\\IotFleet.AppHost.csproj",
+  "projectFilePath": "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\IotFleet.AppHost\\IotFleet.AppHost.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Harold\\.nuget\\packages\\aspire.dashboard.sdk.win-x64\\9.4.2\\aspire.dashboard.sdk.win-x64.9.4.2.nupkg.sha512",
     "C:\\Users\\Harold\\.nuget\\packages\\aspire.hosting\\9.4.2\\aspire.hosting.9.4.2.nupkg.sha512",

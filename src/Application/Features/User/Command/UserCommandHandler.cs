@@ -1,4 +1,5 @@
-﻿using Application.Abstractions.Data;
+﻿using Application.Abstractions.Authentication;
+using Application.Abstractions.Data;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using SharedKernel;
@@ -10,7 +11,8 @@ using UserEntity = Domain.Models.User;
 namespace Application.Features.User.Command
 {
     public class UserCommandHandler(
-        IApplicationDbContext context
+        IApplicationDbContext context,
+        IPasswordHasher passwordHasher
         )
     {
         /// <summary>
@@ -30,7 +32,7 @@ namespace Application.Features.User.Command
   
             var existingUser = await context.Users
                 .AsNoTracking()
-                .FirstOrDefaultAsync(u => u.Email == user.Correo, cancellationToken);
+                .FirstOrDefaultAsync(u => u.Correo == user.Correo, cancellationToken);
 
             if (existingUser != null)
                 return Result.Failure<string>(Error.Conflict("User.EmailExists", "User with this email already exists"));
@@ -38,14 +40,20 @@ namespace Application.Features.User.Command
             var newUser = new UserEntity
             {
                 Id = Guid.NewGuid(),
-                Email = user.Correo,
-                FirstName = user.Nombre_completo,
-                LastName = "",
-                PasswordHash = user.Contraseña, 
-                Role = "User",
-                CreatedAtDate = DateTime.UtcNow,
-                UpdatedAtDate = DateTime.UtcNow,
-                USU_ESTADO = true
+                Identificacion = user.Identificacion,
+                Nombre_completo = user.Nombre_completo,
+                Correo = user.Correo,
+                PasswordHash = passwordHasher.Hash(user.Contraseña), 
+                Id_perfil = user.Id_perfil,
+                Nombre_perfil = user.Id_perfil == 1 ? "Admin" : "User",
+                Estado = user.Estado,
+                Creado_en = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow,
+                Direccion = user.Direccion ?? "",
+                TelefonoFijo = user.TelefonoFijo ?? "",
+                TelefonoCelular = user.TelefonoCelular ?? "",
+                FechaNacimiento = user.FechaNacimiento,
+                TipoIdentificacion = user.TipoIdentificacion ?? "CC"
             };
 
             context.Users.Add(newUser);
@@ -75,10 +83,19 @@ namespace Application.Features.User.Command
             if (existingUser == null)
                 return Result.Failure<UserEntity>(Error.NotFound("User.NotFound", "User not found"));
 
-            existingUser.Email = user.Correo;
-            existingUser.FirstName = user.Nombre_completo;
-            existingUser.PasswordHash = user.Contraseña; // In real app, this should be hashed
-            existingUser.UpdatedAtDate = DateTime.UtcNow;
+            existingUser.Identificacion = user.Identificacion;
+            existingUser.Nombre_completo = user.Nombre_completo;
+            existingUser.Correo = user.Correo;
+            existingUser.PasswordHash = passwordHasher.Hash(user.Contraseña);
+            existingUser.Id_perfil = user.Id_perfil;
+            existingUser.Nombre_perfil = user.Id_perfil == 1 ? "Admin" : "User";
+            existingUser.Estado = user.Estado;
+            existingUser.Direccion = user.Direccion ?? "";
+            existingUser.TelefonoFijo = user.TelefonoFijo ?? "";
+            existingUser.TelefonoCelular = user.TelefonoCelular ?? "";
+            existingUser.FechaNacimiento = user.FechaNacimiento;
+            existingUser.TipoIdentificacion = user.TipoIdentificacion ?? "CC";
+            existingUser.UpdatedAt = DateTime.UtcNow;
 
             await context.SaveChangesAsync(cancellationToken);
 
@@ -102,8 +119,8 @@ namespace Application.Features.User.Command
             if (user == null)
                 return Result.Failure(Error.NotFound("User.NotFound", "User not found"));
 
-            user.USU_ESTADO = false;
-            user.UpdatedAtDate = DateTime.UtcNow;
+            user.Estado = false;
+            user.UpdatedAt = DateTime.UtcNow;
 
             await context.SaveChangesAsync(cancellationToken);
 

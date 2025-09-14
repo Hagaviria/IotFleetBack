@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TW9OHjmPf8o=",
+  "dgSpecHash": "6VMLCF26Oko=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Harold\\IotFleet\\IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj",
+  "projectFilePath": "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\IotFleet.ServiceDefaults\\IotFleet.ServiceDefaults.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Harold\\.nuget\\packages\\microsoft.extensions.ambientmetadata.application\\9.9.0\\microsoft.extensions.ambientmetadata.application.9.9.0.nupkg.sha512",
     "C:\\Users\\Harold\\.nuget\\packages\\microsoft.extensions.compliance.abstractions\\9.9.0\\microsoft.extensions.compliance.abstractions.9.9.0.nupkg.sha512",

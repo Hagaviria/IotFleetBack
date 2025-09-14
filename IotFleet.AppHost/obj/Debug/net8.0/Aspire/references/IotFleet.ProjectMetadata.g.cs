@@ -9,5 +9,5 @@ namespace Projects;
 public class IotFleet : global::Aspire.Hosting.IProjectMetadata
 #pragma warning restore CS8981
 {
-    public string ProjectPath => """C:\Users\Harold\IotFleet\IotFleet\IotFleet.csproj""";
+    public string ProjectPath => """C:\Users\Harold\PruebaTecnica\IotFleet\IotFleet\IotFleet.csproj""";
 }

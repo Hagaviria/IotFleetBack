@@ -5189,11 +5189,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\src\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\src\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Harold\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Harold\\IotFleet\\src\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\src\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5214,8 +5214,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\Harold\\IotFleet\\src\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Harold\\IotFleet\\src\\Application\\Application.csproj"
+            "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\src\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Harold\\PruebaTecnica\\IotFleet\\src\\Application\\Application.csproj"
             }
           }
         }

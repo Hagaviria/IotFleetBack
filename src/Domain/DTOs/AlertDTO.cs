@@ -8,5 +8,7 @@ public record FuelAlertDTO(
     double CurrentFuelLevel,
     double EstimatedAutonomyHours,
     DateTime AlertTimestamp,
-    string Severity 
+    string Severity,
+    string Message,
+    double RemainingDistanceKm
 );

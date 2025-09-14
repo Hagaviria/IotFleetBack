@@ -1,5 +1,62 @@
 [
   {
+    "ContainingType": "IotFleet.Controllers.AlertsController",
+    "Method": "GetFuelAlerts",
+    "RelativePath": "api/Alerts/fuel-alerts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IotFleet.Controllers.AlertsController",
+    "Method": "CalculateFuelAlert",
+    "RelativePath": "api/Alerts/fuel-alerts/calculate/{vehicleId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehicleId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IotFleet.Controllers.AlertsController",
+    "Method": "GetFuelAlertStatistics",
+    "RelativePath": "api/Alerts/fuel-alerts/statistics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IotFleet.Controllers.AlertsController",
+    "Method": "GetVehicleRecentAlerts",
+    "RelativePath": "api/Alerts/vehicle/{vehicleId}/recent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehicleId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "hours",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "IotFleet.Controllers.DashboardController",
     "Method": "GetFuelConsumptionStats",
     "RelativePath": "api/Dashboard/fuel-consumption",
@@ -89,6 +146,26 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IotFleet.Controllers.SeedDataController",
+    "Method": "SeedData",
+    "RelativePath": "api/SeedData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IotFleet.Controllers.SeedDataController",
+    "Method": "ClearData",
+    "RelativePath": "api/SeedData",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

@@ -175,6 +175,3 @@ La arquitectura modular permite evolución gradual hacia microservicios cuando s
 
 ---
 
-*Documento creado: Enero 2024*  
-*Versión: 1.0*  
-*Autor: Equipo de Desarrollo IoT Fleet Backend*

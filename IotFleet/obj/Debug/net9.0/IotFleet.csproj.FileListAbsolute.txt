@@ -397,4 +397,3 @@ C:\Users\Harold\PruebaTecnica\IotFleet\IotFleet\obj\Debug\net9.0\staticwebassets
 C:\Users\Harold\PruebaTecnica\IotFleet\IotFleet\obj\Debug\net9.0\IotFleet.csproj.Up2Date
 C:\Users\Harold\PruebaTecnica\IotFleet\IotFleet\obj\Debug\net9.0\IotFleet.genruntimeconfig.cache
 C:\Users\Harold\PruebaTecnica\IotFleet\IotFleet\obj\Debug\net9.0\ref\IotFleet.dll
-C:\Users\Harold\PruebaTecnica\IotFleet\IotFleet\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

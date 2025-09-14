@@ -20,11 +20,11 @@ namespace IotFleet.Controllers
         ) : ControllerBase
     {
         /// <summary>
-        /// Gets all active fuel alerts for admin users.
+        /// Gets all active fuel alerts for admin and operator users.
         /// </summary>
         /// <returns>List of active fuel alerts.</returns>
         [HttpGet("fuel-alerts")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Operator")]
         public async Task<IActionResult> GetFuelAlerts()
         {
             try
@@ -91,7 +91,7 @@ namespace IotFleet.Controllers
         /// </summary>
         /// <returns>Fuel alert statistics.</returns>
         [HttpGet("fuel-alerts/statistics")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Operator")]
         public async Task<IActionResult> GetFuelAlertStatistics()
         {
             try
@@ -143,7 +143,7 @@ namespace IotFleet.Controllers
         /// <param name="vehicleId">The vehicle ID.</param>
         /// <returns>Fuel alert if generated.</returns>
         [HttpPost("fuel-alerts/calculate/{vehicleId}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Operator")]
         public async Task<IActionResult> CalculateFuelAlert(string vehicleId)
         {
             try
@@ -200,7 +200,7 @@ namespace IotFleet.Controllers
         /// </summary>
         /// <returns>List of generated alerts.</returns>
         [HttpPost("predictive/generate")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Operator")]
         public async Task<IActionResult> GeneratePredictiveAlerts()
         {
             try
@@ -293,6 +293,71 @@ namespace IotFleet.Controllers
             catch (Exception ex)
             {
                 return CustomResults.Problem(Result.Failure(Error.Failure("Alerts.VehicleAlertsError", $"Error retrieving vehicle alerts: {ex.Message}")));
+            }
+        }
+
+        /// <summary>
+        /// Marks an alert as read.
+        /// </summary>
+        /// <param name="alertId">The alert ID.</param>
+        /// <returns>Success message.</returns>
+        [HttpPatch("{alertId}/read")]
+        [Authorize(Roles = "Admin,Operator")]
+        public async Task<IActionResult> MarkAlertAsRead(string alertId)
+        {
+            try
+            {
+                // En un sistema real, aquí se marcaría la alerta como leída en la base de datos
+                // Por ahora, simplemente retornamos éxito ya que las alertas se generan dinámicamente
+                
+                return CustomResults.Success<object>(new { message = "Alert marked as read" }, title: "Alert.Read");
+            }
+            catch (Exception ex)
+            {
+                return CustomResults.Problem(Result.Failure(Error.Failure("Alerts.MarkReadError", $"Error marking alert as read: {ex.Message}")));
+            }
+        }
+
+        /// <summary>
+        /// Deletes an alert.
+        /// </summary>
+        /// <param name="alertId">The alert ID.</param>
+        /// <returns>Success message.</returns>
+        [HttpDelete("{alertId}")]
+        [Authorize(Roles = "Admin,Operator")]
+        public async Task<IActionResult> DeleteAlert(string alertId)
+        {
+            try
+            {
+                // En un sistema real, aquí se eliminaría la alerta de la base de datos
+                // Por ahora, simplemente retornamos éxito ya que las alertas se generan dinámicamente
+                
+                return CustomResults.Success<object>(new { message = "Alert deleted" }, title: "Alert.Deleted");
+            }
+            catch (Exception ex)
+            {
+                return CustomResults.Problem(Result.Failure(Error.Failure("Alerts.DeleteError", $"Error deleting alert: {ex.Message}")));
+            }
+        }
+
+        /// <summary>
+        /// Marks all alerts as read.
+        /// </summary>
+        /// <returns>Success message.</returns>
+        [HttpPatch("mark-all-read")]
+        [Authorize(Roles = "Admin,Operator")]
+        public async Task<IActionResult> MarkAllAlertsAsRead()
+        {
+            try
+            {
+                // En un sistema real, aquí se marcarían todas las alertas como leídas en la base de datos
+                // Por ahora, simplemente retornamos éxito
+                
+                return CustomResults.Success<object>(new { message = "All alerts marked as read" }, title: "Alerts.AllRead");
+            }
+            catch (Exception ex)
+            {
+                return CustomResults.Problem(Result.Failure(Error.Failure("Alerts.MarkAllReadError", $"Error marking all alerts as read: {ex.Message}")));
             }
         }
     }

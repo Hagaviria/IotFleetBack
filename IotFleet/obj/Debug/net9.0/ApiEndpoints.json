@@ -1,6 +1,38 @@
 [
   {
     "ContainingType": "IotFleet.Controllers.AlertsController",
+    "Method": "DeleteAlert",
+    "RelativePath": "api/Alerts/{alertId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alertId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IotFleet.Controllers.AlertsController",
+    "Method": "MarkAlertAsRead",
+    "RelativePath": "api/Alerts/{alertId}/read",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alertId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IotFleet.Controllers.AlertsController",
     "Method": "GetFuelAlerts",
     "RelativePath": "api/Alerts/fuel-alerts",
     "HttpMethod": "GET",
@@ -30,6 +62,26 @@
     "Method": "GetFuelAlertStatistics",
     "RelativePath": "api/Alerts/fuel-alerts/statistics",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IotFleet.Controllers.AlertsController",
+    "Method": "MarkAllAlertsAsRead",
+    "RelativePath": "api/Alerts/mark-all-read",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IotFleet.Controllers.AlertsController",
+    "Method": "GeneratePredictiveAlerts",
+    "RelativePath": "api/Alerts/predictive/generate",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -464,16 +516,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "IotFleet.Controllers.SimulationController",
-    "Method": "GetDiagnostics",
-    "RelativePath": "api/Simulation/diagnostics",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {

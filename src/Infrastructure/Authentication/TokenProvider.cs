@@ -32,7 +32,7 @@ internal sealed class TokenProvider(IConfiguration configuration) : ITokenProvid
         var claims = new[]
         {
                 new Claim(JwtRegisteredClaimNames.Sub, userInfo.Nombre_completo),
-                new Claim(ClaimTypes.Role, userInfo.Id_perfil == 1 ? "Admin" : "User"),
+                new Claim(ClaimTypes.Role, GetRoleFromProfile(userInfo.Id_perfil)),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             };
         var tokenDescritor = new JwtSecurityToken(
@@ -43,6 +43,16 @@ internal sealed class TokenProvider(IConfiguration configuration) : ITokenProvid
             signingCredentials: credentials
         );
         return new JwtSecurityTokenHandler().WriteToken(tokenDescritor);
+    }
+
+    private static string GetRoleFromProfile(int idPerfil)
+    {
+        return idPerfil switch
+        {
+            1 => "Admin",
+            2 => "Operator",
+            _ => "User"
+        };
     }
 
     public UserDTO ValidateToken(string token)

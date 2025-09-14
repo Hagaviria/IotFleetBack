@@ -51,6 +51,18 @@
         }
       }
     },
+    "/api/Alerts/predictive/generate": {
+      "post": {
+        "tags": [
+          "Alerts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Alerts/vehicle/{vehicleId}/recent": {
       "get": {
         "tags": [
@@ -74,6 +86,62 @@
               "default": 24
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alerts/{alertId}/read": {
+      "patch": {
+        "tags": [
+          "Alerts"
+        ],
+        "parameters": [
+          {
+            "name": "alertId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alerts/{alertId}": {
+      "delete": {
+        "tags": [
+          "Alerts"
+        ],
+        "parameters": [
+          {
+            "name": "alertId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alerts/mark-all-read": {
+      "patch": {
+        "tags": [
+          "Alerts"
         ],
         "responses": {
           "200": {
@@ -743,18 +811,6 @@
               "format": "uuid"
             }
           }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Simulation/diagnostics": {
-      "get": {
-        "tags": [
-          "Simulation"
         ],
         "responses": {
           "200": {

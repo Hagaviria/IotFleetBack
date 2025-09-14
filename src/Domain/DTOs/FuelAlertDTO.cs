@@ -13,3 +13,4 @@ public record FuelAlertDTO(
     double RemainingDistance,
     string AlertType = "fuel"
 );
+

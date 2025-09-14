@@ -59,10 +59,11 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");
 
-// Agregar middleware de privacidad antes de la autorización
-app.UseMiddleware<PrivacyMiddleware>();
-
+app.UseAuthentication();
 app.UseAuthorization();
+
+// Agregar middleware de privacidad después de la autorización
+app.UseMiddleware<PrivacyMiddleware>();
 
 app.MapControllers();
 

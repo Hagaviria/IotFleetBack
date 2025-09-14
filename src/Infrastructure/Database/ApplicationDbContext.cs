@@ -16,7 +16,6 @@ namespace Infrastructure.Database
         public DbSet<User> Users { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<SensorData> SensorData { get; set; }
-        public DbSet<Fleet> Fleets { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,7 +24,6 @@ namespace Infrastructure.Database
             ConfigureUser(modelBuilder);
             ConfigureVehicle(modelBuilder);
             ConfigureSensorData(modelBuilder);
-            ConfigureFleet(modelBuilder);
         }
         
         
@@ -164,22 +162,23 @@ namespace Infrastructure.Database
             });
         }
         
-        private static void ConfigureFleet(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Fleet>(entity =>
-            {
-                entity.HasKey(f => f.Id);
-                
-                entity.Property(f => f.Name)
-                    .IsRequired()
-                    .HasMaxLength(100);
-                    
-                entity.Property(f => f.Description)
-                    .HasMaxLength(500);
-                
-                entity.HasIndex(f => f.Name)
-                    .IsUnique();
-            });
-        }
+        // Método ConfigureFleet comentado hasta que se implemente el modelo Fleet
+        // private static void ConfigureFleet(ModelBuilder modelBuilder)
+        // {
+        //     modelBuilder.Entity<Fleet>(entity =>
+        //     {
+        //         entity.HasKey(f => f.Id);
+        //         
+        //         entity.Property(f => f.Name)
+        //             .IsRequired()
+        //             .HasMaxLength(100);
+        //             
+        //         entity.Property(f => f.Description)
+        //             .HasMaxLength(500);
+        //         
+        //         entity.HasIndex(f => f.Name)
+        //             .IsUnique();
+        //     });
+        // }
     }
 }

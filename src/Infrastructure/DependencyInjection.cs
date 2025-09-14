@@ -50,7 +50,7 @@ public static class DependencyInjection
 
     private static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
     {
-        string? connectionString = configuration.GetConnectionString("Database");
+        string? connectionString = configuration.GetConnectionString("myappdb");
 
         services.AddDbContext<ApplicationDbContext>(options =>
         {

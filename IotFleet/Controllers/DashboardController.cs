@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using IotFleet.Extensions;
 using SharedKernel;
-using IotFleet.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Application.Abstractions.Data;
+using IotFleet.Infrastructure;
 
 namespace IotFleet.Controllers
 {
@@ -156,6 +156,128 @@ namespace IotFleet.Controllers
             catch (Exception ex)
             {
                 return CustomResults.Problem(Result.Failure(Error.Failure("Dashboard.FuelConsumptionError", $"Error retrieving fuel consumption statistics: {ex.Message}")));
+            }
+        }
+
+        /// <summary>
+        /// Gets historical data for charts and analysis.
+        /// </summary>
+        /// <param name="vehicleId">Vehicle ID to get data for.</param>
+        /// <param name="startDate">Start date for the data range.</param>
+        /// <param name="endDate">End date for the data range.</param>
+        /// <param name="limit">Maximum number of records to return (default: 1000).</param>
+        /// <returns>Historical sensor data for the specified vehicle and date range.</returns>
+        [HttpGet("historical-data")]
+        public async Task<IActionResult> GetHistoricalData(
+            [FromQuery] string vehicleId,
+            [FromQuery] DateTime startDate,
+            [FromQuery] DateTime endDate,
+            [FromQuery] int limit = 1000)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(vehicleId))
+                {
+                    return CustomResults.Problem(Result.Failure(Error.Problem("Dashboard.InvalidVehicleId", "Vehicle ID is required")));
+                }
+
+                if (!Guid.TryParse(vehicleId, out var vehicleIdGuid))
+                {
+                    return CustomResults.Problem(Result.Failure(Error.Problem("Dashboard.InvalidVehicleId", "Invalid vehicle ID format")));
+                }
+
+                if (limit <= 0 || limit > 5000)
+                    limit = 1000;
+
+                var historicalData = await context.SensorData
+                    .AsNoTracking()
+                    .Include(sd => sd.Vehicle)
+                    .Where(sd => sd.VehicleId == vehicleIdGuid && 
+                                sd.Timestamp >= startDate && 
+                                sd.Timestamp <= endDate)
+                    .OrderBy(sd => sd.Timestamp)
+                    .Take(limit)
+                    .Select(sd => new
+                    {
+                        Id = sd.Id,
+                        VehicleId = sd.VehicleId,
+                        Timestamp = sd.Timestamp,
+                        Speed = sd.Speed,
+                        FuelLevel = sd.FuelLevel,
+                        FuelConsumption = sd.FuelConsumption,
+                        EngineTemperature = sd.EngineTemperature,
+                        AmbientTemperature = sd.AmbientTemperature,
+                        Latitude = sd.Latitude,
+                        Longitude = sd.Longitude,
+                        Altitude = sd.Altitude,
+                        Vehicle = new
+                        {
+                            LicensePlate = sd.Vehicle.LicensePlate,
+                            Model = sd.Vehicle.Model,
+                            Brand = sd.Vehicle.Brand,
+                            FuelCapacity = sd.Vehicle.FuelCapacity,
+                            AverageConsumption = sd.Vehicle.AverageConsumption
+                        }
+                    })
+                    .ToListAsync();
+
+                return CustomResults.Success<object>(historicalData);
+            }
+            catch (Exception ex)
+            {
+                return CustomResults.Problem(Result.Failure(Error.Failure("Dashboard.HistoricalDataError", $"Error retrieving historical data: {ex.Message}")));
+            }
+        }
+
+        /// <summary>
+        /// Gets aggregated historical statistics for charts.
+        /// </summary>
+        /// <param name="vehicleId">Vehicle ID to get statistics for.</param>
+        /// <param name="startDate">Start date for the data range.</param>
+        /// <param name="endDate">End date for the data range.</param>
+        /// <param name="groupBy">Grouping interval: hour, day, week (default: day).</param>
+        /// <returns>Aggregated historical statistics.</returns>
+        [HttpGet("historical-statistics")]
+        public async Task<IActionResult> GetHistoricalStatistics(
+            [FromQuery] string vehicleId,
+            [FromQuery] DateTime startDate,
+            [FromQuery] DateTime endDate,
+            [FromQuery] string groupBy = "day")
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(vehicleId))
+                {
+                    return CustomResults.Problem(Result.Failure(Error.Problem("Dashboard.InvalidVehicleId", "Vehicle ID is required")));
+                }
+
+                if (!Guid.TryParse(vehicleId, out var vehicleIdGuid))
+                {
+                    return CustomResults.Problem(Result.Failure(Error.Problem("Dashboard.InvalidVehicleId", "Invalid vehicle ID format")));
+                }
+
+                var query = context.SensorData
+                    .AsNoTracking()
+                    .Where(sd => sd.VehicleId == vehicleIdGuid && 
+                                sd.Timestamp >= startDate && 
+                                sd.Timestamp <= endDate);
+
+                var statistics = await query.GroupBy(sd => sd.Timestamp.Date)
+                    .Select(g => new
+                    {
+                        Period = g.Key,
+                        AverageSpeed = g.Average(sd => sd.Speed),
+                        AverageFuelLevel = g.Average(sd => sd.FuelLevel),
+                        AverageTemperature = g.Average(sd => sd.EngineTemperature),
+                        Count = g.Count()
+                    })
+                    .ToListAsync();
+
+                return CustomResults.Success<object>(statistics);
+            }
+            catch (Exception ex)
+            {
+                return CustomResults.Problem(Result.Failure(Error.Failure("Dashboard.HistoricalStatisticsError", $"Error retrieving historical statistics: {ex.Message}")));
             }
         }
     }

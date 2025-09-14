@@ -3,16 +3,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 using System.Security.Claims;
+using Application.Abstractions.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Infrastructure.Hubs;
 
 public class FleetHub : Hub
 {
     private readonly ILogger<FleetHub> _logger;
+    private readonly IApplicationDbContext _context;
 
-    public FleetHub(ILogger<FleetHub> logger)
+    public FleetHub(ILogger<FleetHub> logger, IApplicationDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public async Task JoinFleetGroup(string fleetId)
@@ -79,5 +84,44 @@ public class FleetHub : Hub
         }
         
         await base.OnDisconnectedAsync(exception);
+    }
+
+    /// <summary>
+    /// Sends real-time location update to all connected clients
+    /// </summary>
+    public async Task SendLocationUpdate(string vehicleId, object locationData)
+    {
+        await Clients.All.SendAsync("LocationUpdate", new
+        {
+            VehicleId = vehicleId,
+            Location = locationData,
+            Timestamp = DateTime.UtcNow
+        });
+    }
+
+    /// <summary>
+    /// Sends real-time sensor data update to all connected clients
+    /// </summary>
+    public async Task SendSensorDataUpdate(string vehicleId, object sensorData)
+    {
+        await Clients.All.SendAsync("SensorDataUpdate", new
+        {
+            VehicleId = vehicleId,
+            SensorData = sensorData,
+            Timestamp = DateTime.UtcNow
+        });
+    }
+
+    /// <summary>
+    /// Sends alert to all connected clients
+    /// </summary>
+    public async Task SendAlert(string vehicleId, object alert)
+    {
+        await Clients.All.SendAsync("AlertUpdate", new
+        {
+            VehicleId = vehicleId,
+            Alert = alert,
+            Timestamp = DateTime.UtcNow
+        });
     }
 }

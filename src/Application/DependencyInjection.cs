@@ -31,6 +31,7 @@ public static class DependencyInjection
         services.AddScoped<VehicleCommandHandler>();
         services.AddScoped<VehicleQueryHandler>();
         
+        
         return services;
     }
 }

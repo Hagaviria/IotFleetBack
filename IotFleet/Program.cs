@@ -6,6 +6,7 @@ using Infrastructure;
 using Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Hubs;
+using IotFleet.Middleware;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -57,6 +58,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");
+
+// Agregar middleware de privacidad antes de la autorización
+app.UseMiddleware<PrivacyMiddleware>();
 
 app.UseAuthorization();
 

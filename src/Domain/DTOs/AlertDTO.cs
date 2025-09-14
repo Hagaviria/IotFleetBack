@@ -2,13 +2,13 @@ using System;
 
 namespace Domain.DTOs;
 
-public record FuelAlertDTO(
+public record AlertDTO(
+    Guid Id,
     Guid VehicleId,
-    string LicensePlate,
-    double CurrentFuelLevel,
-    double EstimatedAutonomyHours,
-    DateTime AlertTimestamp,
+    string Type,
     string Severity,
     string Message,
-    double RemainingDistanceKm
+    DateTime Timestamp,
+    bool IsRead,
+    string? AdditionalData
 );

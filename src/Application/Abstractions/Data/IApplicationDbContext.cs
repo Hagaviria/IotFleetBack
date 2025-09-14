@@ -13,6 +13,7 @@ namespace Application.Abstractions.Data
         DbSet<User> Users { get; set; }
         DbSet<Vehicle> Vehicles { get; set; }
         DbSet<SensorData> SensorData { get; set; }
+        DbSet<Geofence> Geofences { get; set; }
         
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
         int SaveChanges();

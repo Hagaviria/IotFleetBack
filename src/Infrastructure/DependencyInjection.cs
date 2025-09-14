@@ -13,6 +13,7 @@ using Infrastructure.Time;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -44,6 +45,10 @@ public static class DependencyInjection
         
         services.AddScoped<IFuelPredictionService, FuelPredictionService>();
         services.AddScoped<IWebSocketService, WebSocketService>();
+        
+        // Register Simulation services
+        services.AddSingleton<IVehicleSimulationService, VehicleSimulationService>();
+        services.AddSingleton<IHostedService>(provider => provider.GetRequiredService<IVehicleSimulationService>() as VehicleSimulationService);
 
         return services;
     }

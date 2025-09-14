@@ -16,6 +16,7 @@ namespace Infrastructure.Database
         public DbSet<User> Users { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<SensorData> SensorData { get; set; }
+        public DbSet<Geofence> Geofences { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +25,7 @@ namespace Infrastructure.Database
             ConfigureUser(modelBuilder);
             ConfigureVehicle(modelBuilder);
             ConfigureSensorData(modelBuilder);
+            ConfigureGeofence(modelBuilder);
         }
         
         
@@ -159,6 +161,42 @@ namespace Infrastructure.Database
                 entity.HasIndex(s => s.VehicleId);
                 
                 entity.HasIndex(s => new { s.VehicleId, s.FuelLevel, s.Timestamp });
+            });
+        }
+        
+        private static void ConfigureGeofence(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Geofence>(entity =>
+            {
+                entity.HasKey(g => g.Id);
+                
+                entity.Property(g => g.Name)
+                    .IsRequired()
+                    .HasMaxLength(100);
+                    
+                entity.Property(g => g.Type)
+                    .IsRequired()
+                    .HasMaxLength(20);
+                    
+                entity.Property(g => g.Radius)
+                    .HasPrecision(10, 2);
+                    
+                entity.Property(g => g.Description)
+                    .HasMaxLength(500);
+                    
+                entity.Property(g => g.Color)
+                    .HasMaxLength(20);
+                
+                entity.OwnsOne(g => g.Center, center =>
+                {
+                    center.Property(c => c.Latitude)
+                        .HasPrecision(18, 15);
+                    center.Property(c => c.Longitude)
+                        .HasPrecision(18, 15);
+                });
+                
+                entity.HasIndex(g => g.Name);
+                entity.HasIndex(g => g.IsActive);
             });
         }
         

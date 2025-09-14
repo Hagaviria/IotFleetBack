@@ -48,9 +48,9 @@ internal sealed class GetFuelAlertsQueryHandler(
             {
                 if (query.Severity is null || fuelAlert.Severity == query.Severity)
                 {
-                    if (query.FromDate is null || fuelAlert.AlertTimestamp >= query.FromDate.Value)
+                    if (query.FromDate is null || fuelAlert.Timestamp >= query.FromDate.Value)
                     {
-                        if (query.ToDate is null || fuelAlert.AlertTimestamp <= query.ToDate.Value)
+                        if (query.ToDate is null || fuelAlert.Timestamp <= query.ToDate.Value)
                         {
                             alerts.Add(fuelAlert);
                         }
@@ -59,6 +59,6 @@ internal sealed class GetFuelAlertsQueryHandler(
             }
         }
 
-        return alerts.OrderByDescending(a => a.AlertTimestamp).ToList();
+        return alerts.OrderByDescending(a => a.Timestamp).ToList();
     }
 }

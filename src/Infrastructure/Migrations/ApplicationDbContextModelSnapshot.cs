@@ -22,6 +22,58 @@ namespace Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Domain.Models.Geofence", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("AlertOnEnter")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("AlertOnExit")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Color")
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<double>("Radius")
+                        .HasPrecision(10, 2)
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsActive");
+
+                    b.HasIndex("Name");
+
+                    b.ToTable("Geofences");
+                });
+
             modelBuilder.Entity("Domain.Models.SensorData", b =>
                 {
                     b.Property<Guid>("Id")
@@ -199,6 +251,32 @@ namespace Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Vehicles");
+                });
+
+            modelBuilder.Entity("Domain.Models.Geofence", b =>
+                {
+                    b.OwnsOne("Domain.Models.GeofenceCenter", "Center", b1 =>
+                        {
+                            b1.Property<Guid>("GeofenceId")
+                                .HasColumnType("uuid");
+
+                            b1.Property<double>("Latitude")
+                                .HasPrecision(18, 15)
+                                .HasColumnType("double precision");
+
+                            b1.Property<double>("Longitude")
+                                .HasPrecision(18, 15)
+                                .HasColumnType("double precision");
+
+                            b1.HasKey("GeofenceId");
+
+                            b1.ToTable("Geofences");
+
+                            b1.WithOwner()
+                                .HasForeignKey("GeofenceId");
+                        });
+
+                    b.Navigation("Center");
                 });
 
             modelBuilder.Entity("Domain.Models.SensorData", b =>
